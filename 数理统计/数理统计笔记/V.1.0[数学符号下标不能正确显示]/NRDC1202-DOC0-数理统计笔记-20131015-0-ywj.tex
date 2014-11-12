@@ -1,0 +1,71 @@
+\documentclass[dvipdfm]{BUAApaper}
+\bibliographystyle{BUAAbibsty}
+%\bibliographystyle{unsrt}
+\input paper_preamble.tex
+
+
+\begin{document}
+\author{杨文静}
+\eauthor{Zhang San}
+\title{数理统计笔记}
+\etitle{Notes for Mathematical Statistics}
+\date{2013年10月}
+\advisor{王海泉}{Wang Haiquan}
+\schoolname{软件学院}
+\specialty{软件工程与管理}
+\unitcode{}
+\studentnumber{ZY1321222}
+\classification{}
+\confidential{不涉密}
+
+\maketitle
+\buaakeyword{数理统计, 笔记}{First, Second}
+\setcounter{page}{0}
+
+
+\frontmatter
+
+
+\include{paper_cabstract}
+\include{paper_eabstract}
+\tableofcontents
+\newpage
+\mainmatter
+
+\include{paper_section1} %绪论
+\include{paper_section2} %背景
+\include{paper_section3} %设计与实现
+\include{paper_section4} %关键算法与协议
+
+\include{paper_section5} %测试结果
+\include{paper_section6} %总结
+
+\newpage
+\renewcommand{\thesection}{致谢}
+\section*{致谢}\addcontentsline{toc}{section}{致谢}
+
+首先，我要衷心感谢北京航空航天大学计算机学院四年来对我的辛勤培养。我在计算机学院
+四年的经历将成为我一生的宝贵财富。
+
+然后, 我要感谢....
+
+感谢~Linus Torvalds，他无私的开放了~Linux~的源代码，为我们提供了课题和饭碗。感谢
+~VIM~的作者~Bram Moolenaar(虽然我没有给乌干达的可怜儿童和~Bram~捐款)，他设计的编
+辑器是世界上最好的编辑器。感谢~\TeX{}~的作者~D.\nbs E.\nbs Knuth~教授、
+~\LaTeXe{}的作者~Leslie Lamport~以及~\LaTeXe{}~中无数个宏包的设计者们，他们的设
+计组成的这套排版系统使我可以排出精美的论文，另外在紧张的论文撰写同时给我带来了许
+多快乐。
+
+最后，感谢~\CTeX~社区的所有朋友们。
+
+\nocite{*}
+\standardtilde
+\newpage
+\bibliography{bibs}\addcontentsline{toc}{section}{参考文献}
+\appendix
+\include{paper_appendixA}
+\include{paper_appendixB}
+\include{paper_appendixC}
+\clearpage
+\end{document}
+

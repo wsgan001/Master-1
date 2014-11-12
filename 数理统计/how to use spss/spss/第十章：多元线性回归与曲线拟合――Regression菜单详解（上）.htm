@@ -1,0 +1,698 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0054)http://dc.cpgl.net/study/otherstudy/spss10/spss10a.htm -->
+<!-- saved from url=(0056)spss10.htm --><HTML><HEAD><TITLE>第十章：多元线性回归与曲线拟合――Regression菜单详解（上）</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="MSHTML 6.00.2900.2995" name=GENERATOR></HEAD>
+<BODY style="TEXT-INDENT: 30px">
+<H1 align=center><FONT color=#000080 
+size=5>第十章：多元线性回归与曲线拟合――<BR>Regression菜单详解（上）</FONT></H1>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss10a.htm#10.1"><B>10.1 
+Linear过程</B></A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss10a.htm#10.1.1">10.1.1 
+简单操作入门</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss10a.htm#10.1.1.1">10.1.1.1 
+界面详解</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss10a.htm#10.1.1.2">10.1.1.2 
+输出结果解释</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss10a.htm#10.1.2">10.1.2 
+复杂实例操作</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss10a.htm#10.1.2.1">10.1.2.1 
+分析实例</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss10a.htm#10.1.2.2">10.1.2.2 
+结果解释</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss10a.htm#10.2"><B>10.2 Curve 
+Estimation过程</B></A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss10a.htm#10.2.1" 
+target=_self>10.2.1 界面详解</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss10a.htm#10.2.2">10.2.2 
+实例操作</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><B>10.3 Binary 
+Logistic过程</B></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">10.3.1 
+界面详解与实例</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">10.3.2 结果解释</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">10.3.3 
+模型的进一步优化与简单诊断</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">10.3.3.1 
+模型的进一步优化</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">10.3.3.2 
+模型的简单诊断</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">　</P>
+<P>回归分析是处理两个及两个以上变量间线性依存关系的统计方法。在医学领域中，此类问题很普遍，如人头发中某种金属元素的含量与血液中该元素的含量有关系，人的体表面积与身高、体重有关系；等等。回归分析就是用于说明这种依存变化的数学关系。</P>
+<H2 style="TEXT-INDENT: 0px" align=center><FONT color=#0000ff 
+size=5>§10.1　Linear过程<A name=10.1></A></FONT></H2>
+<H3 style="TEXT-INDENT: 0px"><FONT color=#008080>10.1.1 简单操作入门<A 
+name=10.1.1></A></FONT></H3>
+<P>调用此过程可完成二元或多元的线性回归分析。在多元线性回归分析中，用户还可根据需要，选用不同筛选自变量的方法（如：逐步法、向前法、向后法，等）。</P>
+<P><FONT color=#ff00ff>例10.1：请分析在数据集Fat 
+surfactant.sav中变量fat对变量spovl的大小有无影响？</FONT></P>
+<P>显然，在这里spovl是连续性变量，而fat是分类变量，我们可用用单因素方差分析来解决这个问题。但此处我们要采用和方差分析等价的分析方法--回归分析来解决它。</P>
+<P>回归分析和方差分析都可以被归入广义线性模型中，因此他们在模型的定义、计算方法等许多方面都非常近似，下面大家很快就会看到。</P>
+<P>这里spovl是模型中的因变量，根据回归模型的要求，它必须是正态分布的变量才可以，我们可以用直方图来大致看一下，可以看到基本服从正态，因此不再检验其正态性，继续往下做。</P>
+<P style="TEXT-INDENT: 0px">10.1.1.1 界面详解<A name=10.1.1.1></A></P>
+<P>在菜单中选择Regression==&gt;liner，系统弹出线性回归对话框如下：</P>
+<P style="TEXT-INDENT: 0px"><IMG height=442 
+src="第十章：多元线性回归与曲线拟合――Regression菜单详解（上）.files/spss10.1.gif" width=642 
+border=0></P>
+<P>除了大家熟悉的内容以外，里面还出现了一些特色菜，让我们来一一品尝。</P>
+<P style="TEXT-INDENT: 0px"><FONT lang=ZH-CN face=宋体 
+size=3>【</FONT>Dependent框<FONT lang=ZH-CN face=宋体 size=3>】</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 size=3>用于选入回归分析的应变量。</FONT></P>
+<P style="TEXT-INDENT: 0px"><FONT lang=ZH-CN face=宋体 
+size=3>【</FONT>Block按钮组<FONT lang=ZH-CN face=宋体 size=3>】</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 
+size=3>由Previous和Next两个按钮组成，用于将下面</FONT>Independent框<FONT lang=ZH-CN face=宋体 
+size=3>中选入的自变量分组。由于多元回归分析中自变量的选入方式有前进、后退、逐步等方法，如果对不同的自变量选入的方法不同，则用该按钮组将自变量分组选入即可。下面的例子会讲解其用法。</FONT></P>
+<P style="TEXT-INDENT: 0px"><FONT lang=ZH-CN face=宋体 
+size=3>【</FONT>Independent框<FONT lang=ZH-CN face=宋体 size=3>】</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 size=3>用于选入回归分析的自变量。</FONT></P>
+<P style="TEXT-INDENT: 0px"><FONT lang=ZH-CN face=宋体 
+size=3>【</FONT>Method下拉列表<FONT lang=ZH-CN face=宋体 size=3>】</FONT></P>
+<P>用于选择对自变量的选入方法，有Enter（强行进入法）、Stepwise（逐步法）、Remove（强制剔除法）、Backward（向后法）、Forward（向前法）五种。该选项对当前Independent框中的所有变量均有效。</P>
+<P style="TEXT-INDENT: 0px"><FONT lang=ZH-CN face=宋体 size=3>【</FONT>Selection 
+Variable框<FONT lang=ZH-CN face=宋体 size=3>】</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 
+size=3>选入一个筛选变量，并利用右侧的Rules钮建立一个选择条件，这样，只有满足该条件的记录才会进入回归分析。</FONT></P>
+<P style="TEXT-INDENT: 0px"><FONT lang=ZH-CN face=宋体 size=3>【</FONT>Case 
+Labels框<FONT lang=ZH-CN face=宋体 size=3>】</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 
+size=3>选择一个变量，他的取值将作为每条记录的标签。最典型的情况是使用记录ID号的变量。</FONT></P>
+<P style="TEXT-INDENT: 0px"><FONT lang=ZH-CN face=宋体 
+size=3>【</FONT>WLS&gt;&gt;钮<FONT lang=ZH-CN face=宋体 size=3>】</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 size=3>可利用该按钮进行权重最小二乘法的回归分析。单击该按钮会扩展当前对话框，出现WLS 
+Weight框，在该框内选入权重变量即可。</FONT></P>
+<P style="TEXT-INDENT: 0px"><FONT lang=ZH-CN face=宋体 
+size=3>【</FONT>Statistics钮<FONT lang=ZH-CN face=宋体 size=3>】</FONT></P>
+<P>弹出Statistics对话框，用于选择所需要的描述统计量。有如下选项： 
+<UL type=circle>
+  <LI>Regression 
+  Coefficients复选框组：定义回归系数的输出情况，选中Estimates可输出回归系数B及其标准误，t值和p值，还有标准化的回归系数beta；选中Confidence 
+  intervals则输出每个回归系数的95%可信区间；选中covariance 
+  matrix则会输出各个自变量的相关矩阵和方差、协方差矩阵。以上选项默认只选中Estimates。 
+  <LI>Residuals复选框组：用于选择输出残差诊断的信息，可选的有Durbin-Watson残差序列相关性检验、超出规定的n倍标准误的残差列表。 
+  <LI>Model fit复选框：模型拟合过程中进入、退出的变量的列表，以及一些有关拟合优度的检验：，R，R2和调整的R2, 标准误及方差分析表。 
+  <LI>R squared change复选框：显示模型拟合过程中R2、F值和p值的改变情况。 
+  <LI>Descriptives复选框：提供一些变量描述，如有效例数、均数、标准差等，同时还给出一个自变量间的相关矩阵。 
+  <LI>Part and partial correlations复选框：显示自变量间的相关、部分相关和偏相关系数。 
+  <LI>Collinearity 
+  diagnostics复选框：给出一些用于共线性诊断的统计量，如特征根（Eigenvalues）、方差膨胀因子(VIF)等。</LI></UL>
+<P>以上各项在默认情况下只有Estimates和Model fit复选框被选中。</P>
+<P style="TEXT-INDENT: 0px"><FONT lang=ZH-CN face=宋体 size=3>【</FONT>Plot钮<FONT 
+lang=ZH-CN face=宋体 size=3>】</FONT></P>
+<P>弹出Plot对话框，用于选择需要绘制的回归分析诊断或预测图。可绘制的有标准化残差的直方图和正态分布图，应变量、预测值和各自变量残差间两两的散点图等。</P>
+<P style="TEXT-INDENT: 0px"><FONT lang=ZH-CN face=宋体 size=3>【</FONT>Save钮<FONT 
+lang=ZH-CN face=宋体 size=3>】</FONT></P>
+<P>许多时候我们需要将回归分析的结果存储起来，然后用得到的残差、预测值等做进一步的分析，Save钮就是用来存储中间结果的。可以存储的有：预测值系列、残差系列、距离（Distances）系列、预测值可信区间系列、波动统计量系列。下方的按钮可以让我们选择将这些新变量存储到一个新的SPSS数据文件或XML中。</P>
+<P style="TEXT-INDENT: 0px"><FONT lang=ZH-CN face=宋体 
+size=3>【</FONT>Options钮<FONT lang=ZH-CN face=宋体 size=3>】</FONT></P>
+<P>设置回归分析的一些选项，有： 
+<UL type=circle>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Stepping Method 
+  Criteria单选钮组：设置纳入和排除标准，可按P值或F值来设置。</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Include constant in 
+  equation复选框：用于决定是否在模型中包括常数项，默认选中。</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Missing 
+  Values单选钮组：用于选择对缺失值的处理方式，可以是不分析任一选入的变量有缺失值的记录（Exclude cases 
+  listwise）而无论该缺失变量最终是否进入模型；不分析具体进入某变量时有缺失值的记录（Exclude cases 
+  pairwise）；将缺失值用该变量的均数代替（Replace with mean）。</P></LI></UL>
+<P style="TEXT-INDENT: 0px">10.1.1.2 输出结果解释<A name=10.1.1.2></A></P>
+<P><FONT lang=ZH-CN face=宋体 size=3>根据题目的要求，我们只需要在</FONT>Dependent框<FONT 
+lang=ZH-CN face=宋体 size=3>中</FONT><FONT lang=ZH-CN face=宋体 
+size=3>选入spovl，</FONT>Independent框中<FONT lang=ZH-CN face=宋体 
+size=3>选入fat即可，其他的选项一律不管。单击OK后，系统很快给出如下结果：</FONT></P>
+<P style="TEXT-INDENT: 0px"><B><FONT color=#ff0000 
+size=4>Regression</FONT></B></P>
+<P style="TEXT-INDENT: 0px"><B><IMG height=144 
+src="第十章：多元线性回归与曲线拟合――Regression菜单详解（上）.files/spss10.2.gif" width=300></B></P>
+<P style="TEXT-INDENT: 0px"><FONT 
+color=#0000ff>这里的表格是拟合过程中变量进入/退出模型的情况记录，由于我们只引入了一个自变量，所以只出现了一个模型1（在多元回归中就会依次出现多个回归模型），该模型中fat为进入的变量，没有移出的变量，具体的进入/退出方法为enter。</FONT></P>
+<P style="TEXT-INDENT: 0px"><B><IMG height=124 
+src="第十章：多元线性回归与曲线拟合――Regression菜单详解（上）.files/spss10.3.gif" width=378></B></P>
+<P style="TEXT-INDENT: 0px"><FONT 
+color=#0000ff>上表为所拟合模型的情况简报，显示在模型1中相关系数R为0.578，而决定系数R<SUP>2</SUP>为0.334，校正的决定系数为0.307。</FONT></P>
+<P style="TEXT-INDENT: 0px"><B><IMG height=187 
+src="第十章：多元线性回归与曲线拟合――Regression菜单详解（上）.files/spss10.4.gif" width=534></B></P>
+<P style="TEXT-INDENT: 0px"><FONT 
+color=#0000ff>这是所用模型的检验结果，可以看到这就是一个标准的方差分析表！有兴趣的读者可以自己用方差分析模型做一下，就会发现出了最左侧的一列名字不太一样外，其他的各个参数值都是相同的。从上表可见所用的回归模型F值为12.059，P值为0.002，因此我们用的这个回归模型是有统计学意义的，可以继续看下面系数分别检验的结果。</FONT></P>
+<P style="TEXT-INDENT: 0px"><FONT color=#808080><IMG height=16 
+src="第十章：多元线性回归与曲线拟合――Regression菜单详解（上）.files/hand.gif" width=33 
+border=0>由于这里我们所用的回归模型只有一个自变量，因此模型的检验就等价与系数的检验，在多元回归中这两者是不同的。</FONT></P>
+<P style="TEXT-INDENT: 0px"><B><IMG height=198 
+src="第十章：多元线性回归与曲线拟合――Regression菜单详解（上）.files/spss10.5.gif" width=506></B></P>
+<P style="TEXT-INDENT: 0px"><FONT 
+color=#0000ff>上表给出了包括常数项在内的所有系数的检验结果，用的是t检验，同时还会给出标化/未标化系数。可见常数项和fat都是有统计学意义的，上表的内容如果翻译成中文则如下所示：</FONT></P>
+<DIV align=left>
+<TABLE cellSpacing=0 border=1>
+  <TBODY>
+  <TR>
+    <TD align=middle colSpan=2>
+      <P style="TEXT-INDENT: 0px">　</P></TD>
+    <TD align=middle colSpan=2>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff 
+size=2>未标准化系数</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>标准化系数</FONT></P></TD>
+    <TD align=middle colSpan=2>
+      <P style="TEXT-INDENT: 0px">　</P></TD></TR>
+  <TR>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>模型</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">　</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>系数b</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>系数标准误</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff><FONT 
+      size=2>系数</FONT>β</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>t值</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>P值</FONT></P></TD></TR>
+  <TR>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>1</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>常数</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>5.097</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>0.427</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">　</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff 
+size=2>11.923</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff 
+  size=2>0.000</FONT></P></TD></TR>
+  <TR>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">　</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>fat</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>0.700</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>0.202</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>0.578</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>3.473</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff 
+  size=2>0.002</FONT></P></TD></TR></TBODY></TABLE></DIV>
+<H3 style="TEXT-INDENT: 0px"><FONT color=#008080>10.1.2 复杂实例操作<A 
+name=10.1.2></A></FONT></H3>
+<P style="TEXT-INDENT: 0px">10.1.2.1 分析实例<A name=10.1.2.1></A></P>
+<P><FONT 
+color=#ff00ff>例10.2：请分析在数据集plastic.sav中变量extrusn、additive、gloss和opacity对变量tear_res的大小有无影响？已知extrusn对tear_res的大小有影响。</FONT></P>
+<P>显然，这里是一个多元回归，由于除了extrusn确有影响以外，我们不知道另三个变量有无影响，因此这里我们将extrusn放在第一个block，进入方法为enter（我们有把握extrusn一定有统计学意义）；另三个变量放在第二个block，进入方法为stepwise（让软件自动选择判断），操作如下：</P>
+<OL>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Analyze==&gt;Regression==&gt;Liner</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Dependent框：选入tear_res</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Independent框：选入extrusn；单击next钮</P>
+  <LI>
+  <P 
+  style="TEXT-INDENT: 0px">Independent框：选入additive、gloss和opacity；Method列表框：选择stepwise</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">单击OK钮</P></LI></OL>
+<P style="TEXT-INDENT: 0px">10.1.2.2 结果解释<A name=10.1.2.2></A></P>
+<P>最终的结果如下：</P>
+<P style="TEXT-INDENT: 0px"><B><FONT color=#ff0000 
+size=4>Regression</FONT></B></P>
+<P style="TEXT-INDENT: 0px"><B><IMG height=228 
+src="第十章：多元线性回归与曲线拟合――Regression菜单详解（上）.files/spss10_1.gif" width=372></B></P>
+<P><FONT 
+color=#0000ff>上面的表格依次列出了模型的筛选过程，模型1用进入法引入了extrusn，然后模型2用stepwise法引入了additive，另两个变量因没有达到进入标准，最终没有进入。上面的表格翻译出来如下：</FONT></P>
+<DIV align=left>
+<TABLE cellSpacing=0 border=1>
+  <TBODY>
+  <TR>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>模型</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>进入的变量</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>移出的变量</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff 
+  size=2>变量筛选方法</FONT></P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>1</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff 
+    size=2>extrusn</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">　</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff 
+size=2>进入法</FONT></P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>2</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff 
+    size=2>additive</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">　</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff 
+      size=2>stepwise法（标准：进入概率小于0.05，移出概率大于0.1）</FONT></P></TD></TR></TBODY></TABLE></DIV>
+<P style="TEXT-INDENT: 0px"><B><IMG height=166 
+src="第十章：多元线性回归与曲线拟合――Regression菜单详解（上）.files/spss10_2.gif" width=352></B></P>
+<P><FONT 
+color=#0000ff>上表是两个模型变异系数的改变情况，从调整的R<SUP>2</SUP>可见，从上到下随着新变量的引入，模型可解释的变异占总变异的比例越来越大。</FONT></P>
+<P style="TEXT-INDENT: 0px"><B><IMG height=272 
+src="第十章：多元线性回归与曲线拟合――Regression菜单详解（上）.files/spss10_3.gif" width=470></B></P>
+<P><FONT color=#0000ff>上表是所用两个模型的检验结果，用的方法是方差分析，可见二个模型都有统计学意义。</FONT></P>
+<P style="TEXT-INDENT: 0px"><B><IMG height=230 
+src="第十章：多元线性回归与曲线拟合――Regression菜单详解（上）.files/spss10_4.gif" width=492></B></P>
+<P><FONT 
+color=#0000ff>上表仍然为三个模型中各个系数的检验结果，用的是t检验，可见在模型2中所有的系数都有统计学意义，上表的内容翻译如下：</FONT></P>
+<TABLE cellSpacing=0 border=1>
+  <TBODY>
+  <TR>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2></FONT>&nbsp;</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2></FONT>&nbsp;</P></TD>
+    <TD align=middle colSpan=2>
+      <P style="TEXT-INDENT: 0px" align=center><FONT color=#0000ff 
+      size=2>未标化的系数</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px" align=left><FONT color=#0000ff 
+      size=2>标化的系数</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff 
+size=2></FONT>&nbsp;</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff 
+  size=2></FONT>&nbsp;</P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT color=#0000ff 
+      size=2>模型</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2></FONT>&nbsp;</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2>B</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT color=#0000ff 
+      size=2>标准误</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2>Beta</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px" align=left><FONT color=#0000ff size=2><FONT 
+      face=Arial>t</FONT>值</FONT></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px" align=left><FONT color=#0000ff size=2><FONT 
+      face=Arial>P</FONT>值</FONT></P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2>1</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT color=#0000ff size=2><FONT 
+      face=Arial>(</FONT>常数<FONT face=Arial>)</FONT></FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>5.900</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>.265</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff 
+size=2></FONT>&nbsp;</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2>&nbsp;22.278</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2>.000</FONT></P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2></FONT>&nbsp;</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2>extrusion</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>.590</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>.167</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>.639</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>3.522</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2>.000</FONT></P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2>2</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT color=#0000ff size=2><FONT 
+      face=Arial>(</FONT>常数<FONT face=Arial>)</FONT></FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>5.315</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>.314</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff 
+size=2></FONT>&nbsp;</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff 
+size=2>16.926</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2>.000</FONT></P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2></FONT>&nbsp;</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2>extrusion</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>.590</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>.144</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>.639</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>4.905</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2>.000</FONT></P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2></FONT>&nbsp;</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT color=#0000ff 
+      size=2>additive</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>.390</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>.144</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>.422</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff size=2>2.707</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=left><FONT face=Arial color=#0000ff 
+      size=2>.000</FONT></P></TD></TR></TBODY></TABLE>
+<P style="TEXT-INDENT: 0px"><B><IMG height=273 
+src="第十章：多元线性回归与曲线拟合――Regression菜单详解（上）.files/spss10_5.gif" width=499></B></P>
+<P><FONT 
+color=#0000ff>这是新出现的一个表格，反映的是没有进入模型的各个变量的检验结果，可见在模型1中，未引入模型的候选变量additive还有统计学意义，可能需要引入，而模型2中没有引入的两个变量其P值均大于0.05，无需再进行分析了。</FONT></P>
+<H3 style="TEXT-INDENT: 0px"><FONT color=#008080>10.2 Curve Estimation过程<A 
+name=10.2></A></FONT></H3>
+<P>Curve 
+Estimation过程可以用与拟合各种各样的曲线，原则上只要两个变量间存在某种可以被它所描述的数量关系，就可以用该过程来分析。但这里我们要指出，由于曲线拟合非常的复杂，而该模块的功能十分有限，因此最好采用将曲线相关关系通过变量变换的方式转化为直线回归的形式来分析，或者采用其他专用的模块分析。</P>
+<P style="TEXT-INDENT: 0px">10.2.1 界面详解<A name=10.2.1></A></P>
+<P>Curve Estimation过程中有特色的对话框界面内容如下：</P>
+<P style="TEXT-INDENT: 0px" align=center><IMG height=324 
+src="第十章：多元线性回归与曲线拟合――Regression菜单详解（上）.files/spss10.7.gif" width=440 
+border=0></P>
+<P>下面我们分别解释一下它们的具体功能。</P>
+<P><FONT lang=ZH-CN face=宋体 size=3>【</FONT>Dependent框<FONT lang=ZH-CN face=宋体 
+size=3>】</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 
+size=3>用于选入曲线拟和中的应变量，可选入多个，如果这样，则对各个应变量分别拟合模型。</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 size=3>【</FONT>Independent单选框组<FONT lang=ZH-CN 
+face=宋体 size=3>】</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 
+size=3>用于选入曲线拟和中的自变量，有两种选择，可以选入普通的自变量，也可以选择时间作为自变量，如果这样做，则所用的数据应为时间序列数据格式。</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 size=3>【</FONT>Models复选框组<FONT lang=ZH-CN face=宋体 
+size=3>】</FONT></P>
+<P>是该对话框的重点，用于选择所用的曲线模型，可用的有：</P>
+<UL>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Linear：拟合直线方程，实际上与Linear过程的二元直线回归相同；</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Quadratic：拟合二次方程Y = b0+b1X+b2X2；</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Compound：拟合复合曲线模型Y = b0×b1X；</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Growth：拟合等比级数曲线模型Y = e(b0+b1X)；</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Logarithmic：拟合对数方程Y = b0+b1lnX；</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Cubic：拟合三次方程Y = b0+b1X+b2X2+b3X3；</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">S：拟合S形曲线Y = e(b0+b1/X)；</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Exponential：拟合指数方程Y = b0 eb1X；</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Inverse：数据按Y = b0+b1/X进行变换；</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Power：拟合乘幂曲线模型Y = b0X b1；</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Logistic：拟合Logistic曲线模型Y = 1/（1/u + 
+  b0×b1X），如选择该线型则要求输入上界。</P></LI></UL>
+<P style="TEXT-INDENT: 0px"><FONT color=#808080><IMG height=16 
+src="第十章：多元线性回归与曲线拟合――Regression菜单详解（上）.files/hand.gif" width=33 
+border=0>上面的几种线型和其他的模块有重复，如Logistic、Liner等，由于本模块的功能有限，在重复的情况下建议用其它专用模块来分析。</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 size=3>【</FONT>Include constant in equation复选框<FONT 
+lang=ZH-CN face=宋体 size=3>】</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 size=3>确定是否在方程中包含常数项。</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 size=3>【</FONT>Plot models复选框<FONT lang=ZH-CN 
+face=宋体 size=3>】</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 size=3>要求对模型做图，包括原始数值的连线图和拟合模型的曲线图。</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 size=3>【</FONT>save钮<FONT lang=ZH-CN face=宋体 
+size=3>】</FONT></P>
+<P>弹出SAVE对话框，用于定义想要存储的中间结果，如预测值、预测值可信区间、残差等。</P>
+<P><FONT lang=ZH-CN face=宋体 size=3>【</FONT>Display ANOVA table复选框<FONT 
+lang=ZH-CN face=宋体 size=3>】</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 size=3>要求显示模型检验的方差分析表。</FONT></P>
+<P style="TEXT-INDENT: 0px">10.2.2 实例操作<A name=10.2.2></A></P>
+<P><FONT 
+color=#ff00ff>例10.3：锡克试验阴性率（%）随着年龄的增长而增高，某地查得儿童年龄（岁）X与锡克试验阴性率Y的资料如下，试拟合曲线。</FONT></P>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=1 border=0>
+  <TBODY>
+  <TR>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">年龄（岁）</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">1</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">2</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">3</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">4</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">5</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">6</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">7</P></TD></TR>
+  <TR>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">锡克试验阴性率（%）</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">57.1</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">76.0</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">90.9</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">93.0</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">96.7</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">95.6</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">96.2</P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<P>首先对年龄和阴性率作散点图，发现两者有斜率逐渐放缓的曲线趋势，因此选择二次曲线模型、三次曲线模型和对数曲线模型，最终取其中结果最优者，做法如下：</P>
+<OL>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Analyze==&gt;Regression==&gt;Curve estimation</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Dependant框：选入阴性率</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Independant框：选入年龄</P>
+  <LI>
+  <P 
+  style="TEXT-INDENT: 0px">Models复选框组：选择Quadratic、Curbe、Logarithmatic，取消对Liner的选择。</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">单击OK</P></LI></OL>
+<P>结果如下：</P><B><FONT color=#ff0000 size=4>
+<P style="TEXT-INDENT: 0px">Curve Fit</P></FONT></B><FONT color=#0000ff></FONT>
+<TABLE cellSpacing=1 border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>MODEL:</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>MOD_11.</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>Independent:</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>年龄</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>Dependent</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>Mth</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>Rsq</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>d.f.</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>F</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>Sigf</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>b0</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>b1</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>b2</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>b3</FONT></P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>阴性率</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>LOG</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>.913</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>5</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>52.32</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>.001</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>61.3259</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>20.6704</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>阴性率</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>QUA</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>.970</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>4</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>65.20</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>.001</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>39.2714</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>21.8250</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>-2.0036</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"></P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>阴性率</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>CUB</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>.994</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>3</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>165.37</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>.001</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>25.5714</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>37.4278</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT color=#0000ff>-6.5702</FONT></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><FONT 
+  color=#0000ff>.3806</FONT></P></TD></TR></TBODY></TABLE>
+<P><FONT 
+color=#0000ff>上表给出了所拟合的三个模型的检验报告，包括拟合优度、模型的检验结果和各个系数值，从检验结果看，三个模型均有统计学意义，但从拟合优度看，三次方曲线的拟合优度最高，似乎应选择三次方曲线，但注意三次方曲线多一个参数，要复杂一些，而它的拟合优度和二次方曲线相差不大，因此仅从这里的结果还不好对它们两者作出判断，下面我们还要看看模型曲线的情况。</FONT></P>
+<P><IMG height=384 src="第十章：多元线性回归与曲线拟合――Regression菜单详解（上）.files/spss10_7.gif" 
+width=480 border=0></P>
+<P><FONT 
+color=#0000ff>上图是三个模型曲线和实际值连线的情况，可见在4岁以前，二次方和三次方曲线对模型的拟合相差不大，4岁以后三次方曲线则要明显优于二次方曲线，但我们的观察值只有7例，样本量太少，在曲线回归中，模型的简洁性和拟合优度的高低同样重要，拟合优度太高的模型往往对新样本的拟合度较差，我认为在这种情况下选择参数较少的模型为宜，因此最终选择二次方曲线模型。</FONT></P>
+<P style="TEXT-INDENT: 0px"><FONT color=#808080><IMG height=26 
+src="第十章：多元线性回归与曲线拟合――Regression菜单详解（上）.files/book.gif" width=29 
+border=0>其实这里由于观察样本太少，无论选择哪种模型影响都不大，而且各人的意见不会相同，往往是有多少条曲线，就会有多少种意见，最后还是要结合专业知识来决定，我这样写只是让大家明白，曲线拟和是非常复杂的问题，千万不能轻易下结论。</FONT></P>
+<TABLE width=600 border=0>
+  <TBODY>
+  <TR>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/spss9.htm">回第九章</A></P></TD>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/index.htm">回教程首页</A></P></TD>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/spss11.htm">到第十一章</A></P></TD></TR></TBODY></TABLE>
+<P>　</P></BODY></HTML>

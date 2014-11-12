@@ -1,0 +1,651 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0053)http://dc.cpgl.net/study/otherstudy/spss10/spss11.htm -->
+<!-- saved from url=(0056)spss11.htm --><HTML><HEAD><TITLE>SPSS第十一课 分类资料的回归分析</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="MSHTML 6.00.2900.2995" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId></HEAD>
+<BODY style="TEXT-INDENT: 25px">
+<H1 align=center><FONT color=#000080 size=5>第十一章 
+分类资料的回归分析<BR>――Regression菜单详解（下）</FONT></H1>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><B>10.1 
+Linear过程</B></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">10.1.1 
+简单操作入门</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">10.1.1.1 
+界面详解</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">10.1.1.2 
+输出结果解释</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">10.1.2 
+复杂实例操作</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">10.1.2.1 
+分析实例</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">10.1.2.2 
+结果解释</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><B>10.2 Curve 
+Estimation过程</B></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">10.2.1 界面详解</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">10.2.2 实例操作</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><B><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss11.htm#10.3">10.3 Binary 
+Logistic过程</A></B></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss11.htm#10.3.1">10.3.1 
+界面详解与实例</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss11.htm#10.3.2">10.3.2 
+结果解释</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss11.htm#10.3.3">10.3.3 
+模型的进一步优化与简单诊断</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss11.htm#10.3.3.1">10.3.3.1 
+模型的进一步优化</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss11.htm#10.3.3.2">10.3.3.2 
+模型的简单诊断</A> <IMG height=16 src="" width=44 border=0></P>
+<P 
+align=left>在很久很久以前，地球上还是一个阴森恐怖的黑暗时代，大地上恐龙横行，我们的老祖先－－类人猿惊恐的睁大了双眼，围坐在仅剩的火堆旁，担心着无边的黑暗中不知何时会出现的妖魔鬼怪，没有电视可看，没有网可上...</P>
+<P 
+align=left>我是疯了，还是在说梦话？都不是，类人猿自然不会有机会和恐龙同时代，只不过是我开机准备写这一部分的时候，心里忽然想到，在10年前，国内的统计学应用上还是卡方检验横行，分层的M-H卡方简直就是超级武器，在流行病学中称王称霸，更有那些1：M的配对卡方，N：M的配对卡方，含失访数据的N：M配对卡方之类的，简直象恐龙一般，搞得我头都大了。其实恐龙我还能讲出十多种来，可上面这些东西我现在还没彻底弄明白，好在社会进步迅速，没等这些恐龙完全统制地球，Logistic模型就已经飞速进化到了现代人的阶段，各种各样的Logistic模型不断地在蚕食着恐龙爷爷们的领地，也许还象贪吃的人类一样贪婪的享用着恐龙的身体。好，这是好事，这里不能讲动物保护，现在我们就远离那些恐龙，来看看现代白领的生活方式。</P>
+<P style="TEXT-INDENT: 0px" align=left><FONT color=#808080><IMG height=30 src="" 
+width=30 align=middle border=0> 
+特别声明：我上面的话并非有贬低流行病学的意思，实际上我一直都在做流行病学，我这样写只是想说明近些年来统计方法的普及速度之快而已。</FONT></P>
+<P style="TEXT-INDENT: 0px" align=left><FONT color=#808080><IMG height=26 src="" 
+width=29 border=0> 
+据我一位学数学的师兄讲，Logistic模型和卡方在原理上是不一样的，在公式推演上也不可能划等号，只是一般来说两者的检验结果会非常接近而已，多数情况下可忽略其不同。</FONT></P>
+<H2 style="TEXT-INDENT: 0px" align=center><FONT color=#0000ff size=5>§10.3 
+Binary Logistic过程<A name=10.3></A></FONT></H2>
+<P 
+align=left>所谓Logistic模型，或者说Logistic回归模型，就是人们想为两分类的应变量作一个回归方程出来，可概率的取值在0~1之间，回归方程的应变量取值可是在实数集中，直接做会出现0~1范围之外的不可能结果，因此就有人耍小聪明，将率做了一个Logit变换，这样取值区间就变成了整个实数集，作出来的结果就不会有问题了，从而该方法就被叫做了Logistic回归。</P>
+<P>随着模型的发展，Logistic家族也变得人丁兴旺起来，除了最早的两分类Logistic外，还有配对Logistic模型，多分类Logistic模型、随机效应的Logistic模型等。由于SPSS的能力所限，对话框只能完成其中的两分类和多分类模型，下面我们就介绍一下最重要和最基本的两分类模型。</P>
+<H3 style="TEXT-INDENT: 0px"><FONT color=#008000>10.3.1 界面详解与实例<A 
+name=10.3.1></A></FONT></H3>
+<P align=left><FONT color=#ff00ff>例11.1 
+某研究人员在探讨肾细胞癌转移的有关临床病理因素研究中，收集了一批行根治性肾切除术患者的肾癌标本资料，现从中抽取26例资料作为示例进行logistic回归分析（本例来自《卫生统计学》第四版第11章）。</FONT> 
+
+<UL>
+  <LI>
+  <P style="TEXT-INDENT: 0px" align=left><FONT color=#ff00ff>i： 标本序号</FONT> </P>
+  <LI>
+  <P style="TEXT-INDENT: 0px" align=left><FONT 
+  color=#ff00ff>x1：确诊时患者的年龄(岁)</FONT> </P>
+  <LI>
+  <P style="TEXT-INDENT: 0px" align=left><FONT 
+  color=#ff00ff>x2：肾细胞癌血管内皮生长因子(VEGF)，其阳性表述由低到高共3个等级&nbsp;</FONT> </P>
+  <LI>
+  <P style="TEXT-INDENT: 0px" align=left><FONT 
+  color=#ff00ff>x3：肾细胞癌组织内微血管数(MVC)&nbsp;</FONT> </P>
+  <LI>
+  <P style="TEXT-INDENT: 0px" align=left><FONT 
+  color=#ff00ff>x4：肾癌细胞核组织学分级，由低到高共4级&nbsp;</FONT> </P>
+  <LI>
+  <P style="TEXT-INDENT: 0px" align=left><FONT 
+  color=#ff00ff>x5：肾细胞癌分期，由低到高共4期&nbsp;</FONT> </P>
+  <LI>
+  <P style="TEXT-INDENT: 0px" align=left><FONT color=#ff00ff>y： 肾细胞癌转移情况(有转移y=1; 
+  无转移y=0)。</FONT> </P></LI></UL>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 border=1>
+  <COLGROUP>
+  <COL style="WIDTH: 54pt" span=7 width=72>
+  <TBODY>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>i</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>x1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>x2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>x3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>x4</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>x5</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>y</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>59</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>43.4</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>0</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>36</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>57.2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>0</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>61</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>190</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>0</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>4</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>58</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>128</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>4</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>5</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>55</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>80</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>4</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>6</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>61</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>94.4</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>0</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>7</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>38</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>76</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>0</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>8</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>42</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>240</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>0</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>9</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>50</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>74</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>0</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>10</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>58</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>68.6</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>0</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>11</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>68</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>132.8</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>4</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>0</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>12</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>25</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>94.6</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>4</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>13</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>52</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>56</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>0</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>14</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>31</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>47.8</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>0</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>15</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>36</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>31.6</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>16</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>42</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>66.2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>0</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>17</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>14</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>138.6</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>18</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>32</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>114</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>0</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>19</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>35</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>40.2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>0</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>20</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>70</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>177.2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>4</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>21</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>65</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>51.6</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>4</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>4</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>22</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>45</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>124</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>4</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>0</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>23</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>68</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>127.2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>24</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>31</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>124.8</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>2</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>0</SPAN></TD></TR>
+  <TR style="HEIGHT: 14.25pt" height=19>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>25</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>58</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>128</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>4</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl24 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>0</SPAN></TD></TR>
+  <TR style="HEIGHT: 15pt" height=20>
+    <TD class=xl25 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>26</SPAN></TD>
+    <TD class=xl25 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>60</SPAN></TD>
+    <TD class=xl25 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl25 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>149.8</SPAN></TD>
+    <TD class=xl25 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>4</SPAN></TD>
+    <TD class=xl25 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>3</SPAN></TD>
+    <TD class=xl25 style="WIDTH: 54pt; TEXT-INDENT: 0px" align=middle 
+      x:num><SPAN lang=EN-US>1</SPAN></TD></TR></TBODY></TABLE></CENTER></DIV>
+<P align=left>在菜单上选择Analyze==》Regression==》Binary 
+Logistic...，系统弹出Logistic回归对话框如下：</P>
+<P style="TEXT-INDENT: 0px" align=center><IMG height=337 src="" width=658 
+border=0></P>
+<P 
+align=left>左侧是候选变量框，右上角是应变量框，选入二分类的应变量，下方的Covariates框是用于选入自变量的，只不过这里按国外的习惯被称为了协变量。两框中间的是BLOCK系列按扭，我在上一课已经讲过了，不再重复。中下部的&gt;a*b&gt;框是用于选入交互作用的，和其他的对话框不太相同（我也不知道为什么SPSS偏在这里做得不同），下方的Method列表框用于选择变量进入方法，有进入法、前进法和后退法三大类，三类之下又有细分。最下面的四个按钮比较重要，请大家听我慢慢道来：</P>
+<UL type=circle>
+  <LI>
+  <P style="TEXT-INDENT: 0px" 
+  align=left>Select&gt;&gt;钮：用于限定一个筛选条件，只有满足该条件的记录才会被纳入分析，单击它后对话框会展开让你填入相应的条件。不过我觉得该功能纯属多余，和专门的Select对话框的功能重复了。 
+  </P>
+  <LI>
+  <P style="TEXT-INDENT: 0px" 
+  align=left>Categorical钮：如果你的自变量是多分类的（如血型等），你必须要将它用哑变量的方式来分析，那么就要用该按钮将该变量指定为分类变量，如果有必要，可用里面的选择按钮进行详细的定义，如以哪个取值作为基础水平，各水平间比较的方法是什么等。当然，如果你弄不明白，不改也可以，默认的是以最大取值为基础水平，用Deviance做比较。 
+  </P></LI></UL>
+<P style="TEXT-INDENT: 0px" align=center><IMG height=295 src="" width=498 
+border=0></P>
+<UL>
+  <LI type=circle>
+  <P style="TEXT-INDENT: 0px" 
+  align=left>Save钮：将中间结果存储起来供以后分析，共有预测值、影响强度因子和残差三大类。 </P></LI></UL>
+<P style="TEXT-INDENT: 0px" align=center><IMG height=231 src="" width=498 
+border=0></P>
+<UL>
+  <LI type=circle>
+  <P style="TEXT-INDENT: 0px" 
+  align=left>Options钮：这一部分非常重要，但又常常被忽视，在这里我们可以对模型作精确定义，还可以选择模型预测情况的描述方式，如Statistics 
+  and Plots中的Classification plots就是非常重要的模型预测工具，Correlations of 
+  estimates则是重要的模型诊断工具，Iteration 
+  history可以看到迭代的具体情况，从而得知你的模型是否在迭代时存在病态，下方则可以确定进入和排除的概率标准，这在逐步回归中是非常有用的。 
+  </P></LI></UL>
+<P style="TEXT-INDENT: 0px" align=center><IMG height=345 src="" width=620 
+border=0></P>
+<P align=left>好，根据我们的目的，应变量为Y，而X1~X5为自变量，具体的分析操作如下：</P>
+<OL>
+  <LI>
+  <P align=left>Analyze==》Regression==》Binary Logistic... </P>
+  <LI>
+  <P align=left>Dependent框：选入Y </P>
+  <LI>
+  <P align=left>Covariates框：选入x1~x5 </P>
+  <LI>
+  <P align=left>OK钮：单击 </P></LI></OL>
+<H3 style="TEXT-INDENT: 0px"><FONT color=#008000>10.3.2 结果解释<A 
+name=10.3.2></A></FONT></H3><B><FONT color=#ff0000 size=4>
+<P>Logistic Regression</P></FONT></B>
+<P align=left><B><FONT color=#ff0000 size=4><IMG height=174 src="" 
+width=372></FONT></B></P>
+<P align=left><FONT 
+color=#0000ff>上表为记录处理情况汇总，即有多少例记录被纳入了下面的分析，可见此处因不存在缺失值，26条记录均纳入了分析。</FONT></P>
+<P align=left><B><FONT color=#ff0000 size=4><IMG height=101 src="" 
+width=199></FONT></B></P>
+<P align=left><FONT color=#0000ff>上表为应变量分类情况列表，没什么好解释的。</FONT></P><B><FONT 
+color=#ff0000 size=4>
+<P>Block 0: Beginning Block</P></FONT></B>
+<P align=left><B><FONT color=#ff0000 size=4><IMG height=202 src="" 
+width=505></FONT></B></P>
+<P align=left><FONT color=#0000ff>此处已经开始了拟合，Block 
+0拟合的是只有常数的无效模型，上表为分类预测表，可见在17例观察值为0的记录中，共有17例被预测为0，9例1也都被预测为0，总预测准确率为65.4%，这是不纳入任何解释变量时的预测准确率，相当于比较基线。</FONT></P>
+<P align=left><B><FONT color=#ff0000 size=4><IMG height=82 src="" 
+width=557></FONT></B></P>
+<P align=left><FONT color=#0000ff>上表为Block 0时的变量系数，可见常数的系数值为-0.636。</FONT></P>
+<P align=left><B><FONT color=#ff0000 size=4><IMG height=178 src="" 
+width=471></FONT></B></P>
+<P align=left><FONT color=#0000ff>上表为在Block 
+0处尚未纳入分析方程的侯选变量，所作的检验表示如果分别将他们纳入方程，则方程的改变是否会有显著意义（根据所用统计量的不同，可能是拟合优度，Deviance值等）。可见如果将X2系列的哑变量纳入方程，则方程的改变是有显著意义的，X4和X5也是如此，由于Stepwise方法是一个一个的进入变量，下一步将会先纳入P值最小的变量X2，然后再重新计算该表，再做选择。</FONT></P><B><FONT 
+color=#ff0000 size=4>
+<P>Block 1: Method = Forward Stepwise (Conditional)</P></FONT></B>
+<P align=left><B><FONT color=#ff0000 size=4><IMG height=177 src="" 
+width=331></FONT></B></P>
+<P align=left><FONT color=#0000ff>此处开始了Block 
+1的拟合，根据我们的设定，采用的方法为Forward（我们只设定了一个Block，所以后面不会再有Block 
+2了）。上表为全局检验，对每一步都作了Step、Block和Model的检验，可见6个检验都是有意义的。</FONT></P>
+<P align=left><B><FONT color=#ff0000 size=4><IMG height=114 src="" 
+width=311></FONT></B></P>
+<P align=left><FONT 
+color=#0000ff>此处为模型概况汇总，可见从STEP1到STEP2，DEVINCE从18降到11，两种决定系数也都有上升。</FONT></P>
+<P align=left><B><FONT color=#ff0000 size=4><IMG height=245 src="" 
+width=505></FONT></B></P>
+<P align=left><FONT color=#0000ff>此处为每一步的预测情况汇总，可见准确率由Block 
+0的65%上升到了84%，最后达到96%，效果不错，最终只出现了一例错判。</FONT></P>
+<P align=left><B><FONT color=#ff0000 size=4><IMG height=190 src="" 
+width=557></FONT></B></P>
+<P align=left><FONT color=#0000ff>上表为方程中变量检验情况列表，分别给出了Step 1和Step 
+2的拟合情况。注意X4的P值略大于0.05，但仍然是可以接受的，因为这里用到的是排除标准（默认为0.1），该变量可以留在方程中。以Step 
+2中的X2为例，可见其系数为2.413，OR值为11。</FONT></P>
+<P align=left><B><FONT color=#ff0000 size=4><IMG height=149 src="" 
+width=429></FONT></B></P>
+<P align=left><FONT 
+color=#0000ff>上表为假设将这些变量单独移出方程，则方程的改变有无统计学意义，可见都是有统计学意义的，因此他们应当保留在方程中。</FONT></P>
+<P align=left><B><FONT color=#ff0000 size=4><IMG height=235 src="" 
+width=471></FONT></B></P>
+<P align=left><FONT 
+color=#0000ff>最后这个表格说明的是在每一步中，尚未进入方程的变量如果再进入现有方程，则方程的改变有无统计学意义。可见在Step 
+1时，X4还应该引入，而在Step 2时，其它变量是否引入都无关了。</FONT></P>
+<H3 style="TEXT-INDENT: 0px"><FONT color=#008000>10.3.3 模型的进一步优化与简单诊断<A 
+name=10.3.3></A></FONT></H3>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">10.3.3.1 
+模型的进一步优化<A name=10.3.3.1></A></P>
+<P 
+align=left>前面我们将X1~X5直接引入了方程，实际上，其中X2、X4、X5这三个自变量为多分类变量，我们并无证据认为它们之间个各等级的OR值是成倍上升的，严格来说，这里应当采用哑变量来分析，即需要用Categorical钮将他们定义为分类变量。<FONT 
+color=#ff0000>但本次分析不能这样做</FONT>，原因是这里总例数只有26例，如果引入哑变量模型会使得每个等级的记录数非常少，从而分析结果将<FONT 
+color=#ff0000>极为奇怪</FONT>，无法正常解释，但为了说明哑变量模型的用法，下面我将演示它是如何做的，毕竟不是每个例子都只有26例。</P>
+<P style="TEXT-INDENT: 0px" align=center><IMG height=295 src="" width=498 
+border=0></P>
+<P align=left>默认情况下定义分类变量非常容易，做到如上图所示就可以了，此时分析结果中的改变如下：</P>
+<P align=left><B><FONT color=#ff0000 size=4><IMG height=293 src="" 
+width=394></FONT></B></P>
+<P 
+align=left>上表为自变量中多分类变量的哑变量取值情况代码表。左侧为原变量名及取值，右侧为相应的哑变量名及编码情况：以X5为例，表中可见X5=4时，即取值最高的情况被作为了基线水平，这是多分类变量生成哑变量的默认情况。而X5(1)代表的是X5=1的情况（X5为1时取1，否则取0），X5(2)代表的是X5=2的情况，依此类推。同时注意到许多等级值有几个记录，显然后面的分析结果不会太好。</P>
+<P align=left>相应的，分析结果中也以哑变量在进行分析，如下所示：</P>
+<P align=left><B><FONT color=#ff0000 size=4><IMG height=343 src="" 
+width=557></FONT></B></P>
+<P 
+align=left>上表出现了非常有趣的现象：所有的检验P值均远远大于0.05，但是所有的变量均没有被移出方程，这是怎么回事？再看看下面的这个表格吧。</P>
+<P align=left><B><FONT color=#ff0000 size=4><IMG height=149 src="" 
+width=429></FONT></B></P>
+<P align=left>这个表格为方程的似然值改变情况的检验，可见在最后Step 
+2生成的方程中，无论移出X2还是X4都会引起方程的显著性改变。也就是说，似然比检验的结果和上面的Walds检验结果冲突，以谁为准？此处应以似然比检验为准，因为它是全局性的检验，且Walds检验本身就不太准，这一点大家记住就行了，实在要弄明白请去查阅相关文献。</P>
+<P 
+align=left>请注意：上面的哑变量均是以最高水平为基线水平，这不符合我们的目的，我们希望将最低水平作为基线水平。比如以肾细胞癌第一期为基线水平，需要这样做只要在Categoriacl框中选中相应的变量，在Reference 
+Category处选择First,再单击Change即可，此时变量旁的标示会做出相应的改变如下：</P>
+<P align=left><IMG height=295 src="" width=498 border=0></P>
+<P align=left>分析结果中也会做出相应的改变，此处略。</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">10.3.3.2 
+模型的简单诊断<A name=10.3.3.2></A></P>
+<P 
+align=left>SPSS本身提供了几种用于模型诊断的工具，基本上都集中在Options对话框中，除了大家熟悉的残差分析外，这里这种介绍三种简单而有非常有用的工具：迭代记录、相关矩阵和分类图。</P>
+<P align=left><B><FONT color=#ff0000 size=4><IMG height=370 src="" 
+width=434></FONT></B></P>
+<P align=left>上表为Block 
+1的迭代记录，可见无论是似然值，还是三个系数值，均是从迭代开始就向着一个方向发展，最终达到收敛，这说明整个迭代过程是健康的，问题不大；如果中途出现波折，尤其是当引入新变量后变化方向改变了，则提示要好好研究。</P>
+<P align=left><B><FONT color=#ff0000 size=4><IMG height=158 src="" 
+width=341></FONT></B></P>
+<P 
+align=left>上表为方程中变量的相关矩阵，可见X2和常数相关性较强，当引入X4后仍然如此，提示要关注这一现象，以防因自变量间的共线性导致方程系数不稳（此时迭代记录多半也会有波动）。当然，由于本例只有26条记录，这一问题是没有办法深入研究的。</P>
+<P align=left><IMG height=431 src="" width=483 border=0></P>
+<P align=left>上图是Step 
+1结束时，即只引入X2时的预测图，0和1代表实际取值，当预测的概率值大于0.5时，则预测结果为1，反之为0，由上图可见，该模型对0的预测是比较好的，多数的概率都在0附近，但对1的预测不准，即使正确的，计算出的概率也在0.8左右，并且有好几个都判错了。</P>
+<P align=left><IMG height=428 src="" width=487 border=0></P>
+<P align=left>上图为Step 
+2结束后模型的预测状况，可见此时预测结果有了较大的改善，概率精度提高了许多，只有一例0被错判为了1，并且从分布上看，这一例可能是极端情况，再引入其它变量也不见的能将预测效果改变多少。</P>
+<TABLE width=600 border=0>
+  <TBODY>
+  <TR>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/spss10a.htm">回第十章</A></P></TD>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/index.htm">回教程首页</A></P></TD>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/spss12.htm">到第十二章</A></P></TD></TR></TBODY></TABLE></BODY></HTML>

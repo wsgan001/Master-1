@@ -1,0 +1,60 @@
+\section{估计理论}
+
+统计推断主要分为参数估计和假设检验，本章分析参数估计。参数估计又分为点估计和区间估计。
+\subsection{参数的点估计}
+\subsubsection{基本概念}
+    \begin{itemize}
+      \item 参数：在参数分布簇$\{ P_\theta ,\theta\in \Theta\}$ 中，通常将任何与总体有关的带估计的量都看成参数，它可以是决定总体参数和参数的实函数。可以表示为$q(\theta)$.
+      \item 估计量：参数的任何实质统计量$T(X_1,X_2,...,X_n)$都称为估计量。$T(x_1,x_2,...,x_n)$称为估计值。
+      \item 样本和样本观察值：$X_1,X_2,...,X_n$ 称为样本，$x_1,x_2,...,x_n$ 为样本观察值。在这里可以不区分。
+      \item 统计量$T(X_1,X_2,...,X_n)$ 为参数$q(\theta)$的估计，记为$\hat{q}(x_1,x_2,...,x_n)=T(X_1,X_2,...,X_n)$.
+    \end{itemize}
+
+\subsubsection{频率替换法}
+
+其中心思想是，\emph{大数定理，用频率替换相应的概率}。
+考虑的对象是独立重复试验。
+
+\begin{description}
+  \item[例子1] 对于多项分布，$p(n1,n2,...,n_m)= n!/(n_1!n_2!...n_m!)p_1^{n_1}p_2^{n_2}...p_n^{n_m}$
+  其最简单的估计是 $\hat{p}_i = n_i/n$.
+\end{description}
+
+$if \theta = (\theta_1,\theta_2,...,\theta_l) and p_i = h_i(\theta_1,\theta_2,...,\theta_l), i = 1,2,...,m,l\leq m$.
+\begin{enumerate}
+  \item 将 $\theta_j $表示为 p_i 的函数.
+  \item 带入 $q(\theta),$可得$q(\theta) = g(p1,p2,...pm)$.
+  \item 然后 用频率替换概率$q(\theta) = g(n_1/n,n_2/n,...,n_k/n)$
+\end{enumerate}
+
+\subsubsection{矩估计法}
+
+其中心思想是，\emph{大数定理,用样本矩替换总体矩}。样本矩依概率收敛于总体矩。依然使用替换原理。
+
+由课本43页例题2.1.4可知，令$\mu_1 = E(x)= \mu, \mu_2 = E(X^2) = Var(X)+(E(x))^2 = \sigma^2 + \mu^2$,将
+$\mu$和$\sigma^2$表示为k阶中心距的函数即可。    
+
+\begin{description}
+  \item[经验1] 矩估计不唯一，处理这种问题的一种简便方法是构造方程组的总体矩的阶数尽可能小。
+  \item[经验2] $E(x)=\mu, Var(X)= E(X^2)-(EX)^2$.
+\end{description}
+ 
+\subsubsection{极大似然估计法}
+
+中心思想是参数估计使得某事件发生的概率大。
+
+对每个x的值，取$p(x,\hat{\theta}(x)) = \max_{\theta \in \Theta}\{p(x,\theta}(x)\}$.
+
+
+
+
+
+
+\subsection{信息不等式}
+
+\subsection{相合估计}
+
+\subsection{区间估计}
+
+
+

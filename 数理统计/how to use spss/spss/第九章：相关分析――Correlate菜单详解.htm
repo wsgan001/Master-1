@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0052)http://dc.cpgl.net/study/otherstudy/spss10/spss9.htm -->
+<!-- saved from url=(0055)spss9.htm --><HTML><HEAD><TITLE>第九章：相关分析――Correlate菜单详解</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="MSHTML 6.00.2900.2995" name=GENERATOR></HEAD>
+<BODY style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" bgColor=#ffffff>
+<H1 align=center><FONT color=#000080 size=5>第九章 相关分析――Correlate菜单详解</FONT></H1>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><B><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss9.htm#9.1">9.1　Bivariate过程</A></B></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss9.htm#9.1.1">9.1.1　界面说明</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss9.htm#9.1.2">9.1.2　分析实例</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss9.htm#9.1.3">9.1.3　结果解释</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><B><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss9.htm#9.2">9.2　Partial过程</A></B></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss9.htm#9.2.1">9.2.1　界面说明</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss9.htm#9.2.2">9.2.2　结果解释</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><B><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss9.htm#9.3">9.3　Distances过程</A></B></P>
+<P>在医学中经常要遇到分析两个或多个变量间关系的情况，有时是希望了解某个变量对另一个变量的影响强度，有时则是要了解变量间联系的密切程度，前者用下一章将要讲述的回归分析来实现，后者则需要用到本章所要讲述的相关分析实现。</P>
+<P>SPSS的相关分析功能被集中在Statistics菜单的Correlate子菜单中，他一般包括以下三个过程： 
+<UL>
+  <LI>Bivariate过程 
+  此过程用于进行两个/多个变量间的参数/非参数相关分析，如果是多个变量，则给出两两相关的分析结果。这是Correlate子菜单中最为常用的一个过程，实际上我们对他的使用可能占到相关分析的95%以上。下面的讲述也以该过程为主。 
+
+  <LI>Partial过程 
+  如果需要进行相关分析的两个变量其取值均受到其他变量的影响，就可以利用偏相关分析对其他变量进行控制，输出控制其他变量影响后的相关系数，这种分析思想和协方差分析非常类似。Partial过程就是专门进行偏相关分析的。 
+
+  <LI>Distances过程 
+  调用此过程可对同一变量内部各观察单位间的数值或各个不同变量间进行距离相关分析，前者可用于检测观测值的接近程度，后者则常用于考察预测值对实际值的拟合优度。该过程在实际应用中用的非常少。</LI></UL>
+<H2 align=center><FONT color=#0000ff>§9.1　Bivariate过程<A 
+name=9.1></A></FONT></H2>
+<H3><FONT color=#008080>9.1.1　界面说明<A name=9.1.1></A></FONT></H3>
+<P>【Variables框】</P>
+<P>用于选入需要进行相关分析的变量，至少需要选入两个。</P>
+<P>【Correlation Coefficients复选框组】</P>
+<P>用于选择需要计算的相关分析指标，有： 
+<UL>
+  <LI>Pearson复选框 选择进行积距相关分析，即最常用的参数相关分析 
+  <LI>Kendall's tau-b复选框 计算Kendall's等级相关系数 
+  <LI>Spearman复选框 计算Spearman相关系数，即最常用的非参数相关分析（秩相关）</LI></UL>
+<P>【Test of Significance单选框组】</P>
+<P>用于确定是进行相关系数的单侧（One-tailed）或双侧（Two-tailed）检验，一般选双侧检验。</P>
+<P>【Flag significant correlations】</P>
+<P>用于确定是否在结果中用星号标记有统计学意义的相关系数，一般选中。此时P&lt;0.05的系数值旁会标记一个星号，P&lt;0.01的则标记两个星号。</P>
+<P>【Options钮】</P>
+<P>弹出Options对话框，选择需要计算的描述统计量和统计分析： 
+<UL>
+  <LI>Statistics复选框组 可选的描述统计量。它们是：</LI></UL>
+<OL>
+  <LI>Means and standard deviations每个变量的均数和标准差 
+  <LI>Cross-product deviations and covariances各对变量的交叉积和以及协方差阵</LI></OL>
+<UL>
+  <LI>Missing Values单选框组 定义分析中对缺失值的处理方法，可以是具体分析用到的两个变量有缺失值才去除该记录（Exclude cases 
+  pairwise），或只要该记录中进行相关分析的变量有缺失值（无论具体分析的两个变量是否缺失），则在所有分析中均将该记录去除(Excludes cases 
+  listwise)。默认为前者，以充分利用数据。</LI></UL>
+<H3><FONT color=#008080>9.1.2　分析实例<A name=9.1.2></A></FONT></H3>
+<P><FONT color=#ff00ff>例9.1 
+请计算SPSS自带的样本数据judges.sav中意大利(judge1)和韩国法官(judge2)得分的相关性。</FONT></P>
+<P>解：由于judge1和judge2的数据分布不太好，这里同时计算Pearson相关系数和Spearman相关系数。操作如下：</P>
+<P><FONT color=#808080><IMG height=25 
+src="第九章：相关分析――Correlate菜单详解.files/hand.gif" width=37 align=center> 
+这种做法严格说来是有问题的，我这样做主要是想偷懒。</FONT> 
+<OL>
+  <LI>Variables框：选入judge1、judge2 
+  <LI>Pearson复选框：选中 
+  <LI>Spearman复选框：选中 
+  <LI>单击OK钮</LI></OL>
+<H3><FONT color=#008080>9.1.3　结果解释<A name=9.1.3></A></FONT></H3>
+<P>例9.1的输出结果如下所示：</P><FONT face=黑体 color=#ff0000 size=4><B>
+<P>Correlations</B></FONT></P><FONT face=System><B>
+<P><IMG height=204 src="第九章：相关分析――Correlate菜单详解.files/spss9_1.gif" 
+width=346></B></FONT></P>
+<P><FONT 
+color=#0000ff>在上面的结果中，变量间两两的相关系数是用方阵的形式给出的。每一行和每一列的两个变量对应的格子中就是这两个变量相关分析结果结果，共分为三列，分别是相关系数、P值和样本数。由于这里只分析了两个变量，因此给出的是2*2的方阵。由上表可见judge1、judge2自身的相关系数均为1（of 
+course），而judge1和judge2的相关系数为0.91，P&lt;0.001，有非常显著的统计学意义。</FONT></P>
+<P><FONT color=#808080><IMG height=25 alt="hand.gif (149 bytes)" 
+src="第九章：相关分析――Correlate菜单详解.files/hand.gif" width=37 align=center>&nbsp; 
+如果需要得到具体的P值。请进入表格的编辑模式，双击P值所在的单元格，就可以看到精确的P值大小。</FONT></P>
+<P><FONT color=#0000ff>上表的标题内容翻译如下：&nbsp;</FONT></P>
+<TABLE cellSpacing=0 border=1>
+  <TBODY>
+  <TR>
+    <TD>　</TD>
+    <TD>　</TD>
+    <TD><FONT color=#0000ff size=2>Italy</FONT></TD>
+    <TD><FONT color=#0000ff size=2>South Korea</FONT></TD></TR>
+  <TR>
+    <TD><FONT color=#0000ff size=2>Italy</FONT></TD>
+    <TD><FONT color=#0000ff size=2>Pearson积距相关系数<BR>P值（双侧）<BR>样本数</FONT></TD>
+    <TD align=middle><FONT color=#0000ff size=2>1.000<BR>.<BR>300</FONT></TD>
+    <TD align=middle><FONT color=#0000ff 
+  size=2>.910<BR>.000<BR>300</FONT></TD></TR>
+  <TR>
+    <TD><FONT color=#0000ff size=2>South<BR>Korea</FONT></TD>
+    <TD><FONT color=#0000ff size=2>Pearson积距相关系数<BR>P值（双侧）<BR>样本数</FONT></TD>
+    <TD align=middle><FONT color=#0000ff size=2>.910<BR>.000<BR>300</FONT></TD>
+    <TD align=middle><FONT color=#0000ff 
+  size=2>1.000<BR>.<BR>300</FONT></TD></TR></TBODY></TABLE><FONT face=黑体 
+color=#ff0000 size=4><B>
+<P>Nonparametric Correlations</B></FONT></P><FONT face=System><B>
+<P><IMG height=204 src="第九章：相关分析――Correlate菜单详解.files/spss9_2.gif" 
+width=447></B></FONT></P>
+<P><FONT 
+color=#0000ff>此处的表格内容和上面Pearson相关系数的结果非常相似，只是表格左侧注明为Spearman等级相关。可见judge1和judge2的等级相关系数为0.92，P&lt;0.001，有非常显著的统计学意义。</FONT></P>
+<H2 align=center><FONT color=#0000ff>9.2 Partial过程<A name=9.2></A></FONT></H2>
+<H3><FONT color=#008080>9.2.1　界面说明<A name=9.2.1></A></FONT></H3>
+<P>【Variables框】</P>
+<P>用于选入需要进行偏相关分析的变量，至少需要选入两个。</P>
+<P>【Controlling for框】</P>
+<P>用于选择需要在偏相关分析时进行控制的协变量，如果不选入，则进行的就是普通的相关分析。</P>
+<P>【Test of Significance单选框组】</P>
+<P>意义同前，用于确定是进行相关系数的单侧（One-tailed）或双侧（Two-tailed）检验，一般选双侧检验。</P>
+<P>【Display actual significince level复选框】</P>
+<P>用于确定是否在结果中给出确切的P值，一般选中。</P>
+<P>【Options钮】</P>
+<P>弹出Options对话框，选择需要计算的描述统计量和统计分析： 
+<UL>
+  <LI>Statistics复选框组 可选的描述统计量。它们是：</LI></UL>
+<OL>
+  <LI>Means and standard deviations每个变量的均数和标准差 
+  <LI>Zero-order correlations给出包括协变量在内所有变量的相关方阵</LI></OL>
+<UL>
+  <LI>Missing Values单选框组 定义分析中对缺失值的处理方法，可以是具体分析用到的两个变量有缺失值才去除该记录（Exclude cases 
+  pairwise），或只要该记录中进行相关分析的变量有缺失值（无论具体分析的两个变量是否缺失），则在所有分析中均将该记录去除(Excludes cases 
+  listwise)。默认为前者，以充分利用数据。</LI></UL>
+<H3><FONT color=#008080>9.2.2　结果解释<A name=9.2.2></A></FONT></H3>
+<P>偏相关分析的结果和普通相关分析几乎完全相同，非常容易看懂，比如说我们要在排除变量judge3的影响后计算变量judge1和judge2的相关性（只是举个例子而已，这样是没有实际依据的），则结果如下：</P><FONT 
+face=黑体 color=#ff0000 size=4><B>
+<P>Partial Corr</B></FONT></P><FONT face=宋体 color=#0000ff><PRE>- - -  P A R T I A L   C O R R E L A T I O N   C O E F F I C I E N T S  - - -</PRE><PRE>Controlling for..    JUDGE3</PRE><PRE>              JUDGE1     JUDGE2</PRE><PRE>JUDGE1        1.0000      .5632
+             (    0)    (  297)
+             P= .       P= .000</PRE><PRE>JUDGE2         .5632     1.0000
+             (  297)    (    0)
+             P= .000    P= .</PRE><PRE>(Coefficient / (D.F.) / 2-tailed Significance)</PRE><PRE>" . " is printed if a coefficient cannot be computed</PRE></FONT>
+<P>这些结果一目了然，不用再解释了吧，可见当控制了变量judge3的影响后，judge1和judge2的相关系数值大大降低，但仍然具有统计学意义。</P>
+<P><FONT color=#808080><IMG height=30 
+src="第九章：相关分析――Correlate菜单详解.files/face.gif" width=30 align=center> 
+请注意，友好的统计软件界面是会骗人的：偏相关分析和协方差分析一样，里面蕴涵的统计学知识要远比你用统计软件进行操作时感觉到的内容复杂的多，这些分析都具有严格的适用条件，在进行分析之前需要对数据是否满足条件进行考察。因此进行这些分析前一定要参考有关书籍，并慎重行事。</FONT></P>
+<H2 align=center><FONT color=#0000ff>9.3 Distances过程<A name=9.3></A></FONT></H2>
+<P>Distances过程是专门进行距离相关分析用的，由于该方法大多数人用的非常少，里面又涉及到太深的统计原理，这里我只对界面做一解释，就不再深入下去了。如要用到，请参考有关的多元统计专业书。</P>
+<P>【Variables框】</P>
+<P>用于选入需要进行距离相关分析的变量，至少需要选入两个。</P>
+<P>【Label cases by框】</P>
+<P>选择一个变量用于给各个记录加上标签，可以不选。</P>
+<P>【Compute Distances单选框组】</P>
+<P>其中有两个选择，Between cases表示作变量内部观察值之间的距离相关分析，Between variables表示作变量之间的距离相关分析。</P>
+<P>【Measure单选框组】</P>
+<P>用于选择分析时采用的距离类型：Dissimilarities为不相似性测距，Similarities为相似性测距。</P>
+<P>【Measure钮】</P>
+<P>和前面的Measure单选框组配合使用，单击后弹出Distance：Dissimilarity 
+Measure对话框，用户可根据数据特征选用测距方法：</P>
+<P>选择Dissimilarities时各种数据类型可用的测距方法有：</P>
+<P>1、计量资料 
+<UL>
+  <LI>Euclidean distance：以两变量差值平方和的平方根为距离； 
+  <LI>Squared Euclidean distance：以两变量差值平方和为距离； 
+  <LI>Chebychev：以两变量绝对差值的最大值为距离； 
+  <LI>Block：以两变量绝对差值之和为距离； 
+  <LI>Minkowski：以两变量绝对差值p次幂之和的p次根为距离； 
+  <LI>Customized：以两变量绝对差值p次幂之和的r次根为距离。</LI></UL>
+<P>2、计数资料 
+<UL>
+  <LI>Chi-square measure：χ2值测距； 
+  <LI>Phi-square measure：ψ2值测距，即将χ2测距值除合计频数的平方根。</LI></UL>
+<P>3、二分类变量 
+<UL>
+  <LI>Euclidean distance：二分差平方和的平方根，最小为0，最大无限； 
+  <LI>Squared Euclidean distance：二分差平方和，最小为0，最大无限； 
+  <LI>Size difference：最小距离为0，最大无限； 
+  <LI>Pattern difference：从0至1的无级测距； 
+  <LI>Variance：以方差为距，最小为0，最大无限； 
+  <LI>Lance and Williams：Bray-Curtis非等距系数，界于0至1之间。</LI></UL>
+<P>选择Similarities时各种数据类型可用的测距方法有：</P>
+<P>1、计量资料 
+<UL>
+  <LI>Pearson correlation：以Pearson相关系数为距离； 
+  <LI>Cosine：以变量矢量的余弦值为距离，界于-1至+1之间。</LI></UL>
+<P>2、二分类变量 
+<UL>
+  <LI>Russell and Rao：以二分点乘积为配对系数； 
+  <LI>Simple matching：以配对数与总对数的比例为配对系数； 
+  <LI>Jaccard：相似比例，分子与分母中的配对数与非配对数给予相同的权重； 
+  <LI>Dice：Dice配对系数，分子与分母中的配对数给予加倍的权重； 
+  <LI>Rogers and Tanimoto：Rogers and Tanimoto配对系数，分母为配对数，分子为非配对数，非配对数给予加倍的权重； 
+  <LI>Sokal and Sneath 1：Sokal and Sneath Ⅰ型配对系数，分母为配对数，分子为非配对数，配对数给予加倍的权重； 
+  <LI>Sokal and Sneath 2：Sokal and Sneath Ⅱ型配对系数，分子与分母均为非配对数，但分子给予加倍的权重； 
+  <LI>Sokal and Sneath 3：Sokal and Sneath Ⅲ型配对系数，分母为配对数，分子为非配对数，分子与分母的权重相同； 
+  <LI>Kulczynski 1：Kulczynski Ⅰ型配对系数，分母为总数与配对数之差，分子为非配对数，分子与分母的权重相同； 
+  <LI>Kulczynski 2：Kulczynski平均条件概率； 
+  <LI>Sokal and Sneath 4：Sokal and Sneath 条件概率； 
+  <LI>Hamann：Hamann概率； 
+  <LI>Lambda：Goodman-Kruskai相似测量的λ值； 
+  <LI>Anderberg's D：以一个变量状态预测另一个变量状态； 
+  <LI>Yule's Y：Yule综合系数，属于2×2四格表的列联比例函数； 
+  <LI>Yule's Q：Goodman-Kruskal γ值，属于2×2四格表的列联比例函数。</LI></UL>
+<P>3、其他类型变量 
+<UL>
+  <LI>Ochiai：Ochiai二分余弦测量； 
+  <LI>Sokal and Sneath 5：Sokal and Sneath Ⅴ型相似测量； 
+  <LI>Phi 4 point correlation：Pearson相关系数的平方值； 
+  <LI>Dispersion：Dispersion相似测量。 
+  <LI>同时，还可以选择数据转换形式： 
+  <LI>None：不作数据转换； 
+  <LI>Z-Scores：作标准Z分值转换； 
+  <LI>Range -1 to 1：作-1至+1之间的标准化转换； 
+  <LI>Range 0 to 1：作0至1之间的标准化转换； 
+  <LI>Maximum magnitude of 1：作最大量值1的标准转换； 
+  <LI>Mean of 1：作均数单位转换； 
+  <LI>Standard deviation of 1：作标准差单位转换。</LI></UL>
+<TABLE width=600 border=0>
+  <TBODY>
+  <TR>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/spss8b.htm">回第八章（下）</A></P></TD>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/index.htm">回教程首页</A></P></TD>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/spss10a.htm">到第十章</A></P></TD></TR></TBODY></TABLE>
+<P>　</P></BODY></HTML>

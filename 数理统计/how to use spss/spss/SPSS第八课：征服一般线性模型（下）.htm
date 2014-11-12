@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0053)http://dc.cpgl.net/study/otherstudy/spss10/spss8b.htm -->
+<!-- saved from url=(0056)spss8b.htm --><HTML><HEAD><TITLE>SPSS第八课：征服一般线性模型（下）</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="MSHTML 6.00.2900.2995" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId></HEAD>
+<BODY style="TEXT-INDENT: 35px">
+<H1 style="TEXT-INDENT: 0px" align=center><FONT color=#000080 
+size=5>SPSS第八课：征服一般线性模型<BR>――General Linear Model菜单详解（下）</FONT></H1>
+<P 
+style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><B>8.1　两因素方差分析</B></P>
+<P 
+style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">8.1.1　univarate对话框界面说明</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">8.1.2　结果解释</P>
+<P 
+style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><B>8.2　协方差分析</B></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">8.2.1　分析步骤</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">8.2.2　结果解释</P>
+<P 
+style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><B>8.3　其他较简单的方差分析问题</B></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><B><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss8b.htm#8.4">8.4　多元方差分析</A></B></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss8b.htm#8.4.1">8.4.1　分析步骤</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss8b.htm#8.4.2">8.4.2　结果解释</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><B><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss8b.htm#8.5">8.5　重复测量的方差分析</A></B></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss8b.htm#8.5.1">8.5.1　Repeated 
+measures对话框界面说明</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss8b.htm#8.5.2">8.5.2　结果解释</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">　</P>
+<H2 style="TEXT-INDENT: 0px" align=center><FONT color=#0000ff>§8.4　多元方差分析<A 
+name=8.4></A></FONT></H2>
+<P>所谓的多元方差分析，就是说存在着不止一个应变量，而是两个以上的应变量共同反映了自变量的影响程度。比如要研究某些因素对儿童生长的影响程度，则身高、体重等都可以作为生长程度的测量因子，即都应作为应变量。</P>
+<H3 style="TEXT-INDENT: 0px"><FONT color=#008080>8.4.1　分析步骤<A 
+name=8.4.1></A></FONT></H3>
+<P>为了方便起见，我们这里直接利用SPSS自带的数据集plastic.sav，假设tear_res、gloss和opacity都使反应橡胶质量的指标（不要笑，是假设），现在要研究extrusn和additive对橡胶的质量影响如何，则应采用多元方差分析。</P>
+<P>选择Analyze==&gt;General Linear 
+Model==&gt;Multivariate，则弹出Multivariate对话框，请注意，除了没有random 
+effect外，它的所有元素都是和univariate对话框相同的，里面的内容也相同，因此我们这里就不再重复了。</P>
+<P>按照我们的分析要求，对话框操作步骤如下：</P>
+<OL>
+  <LI>Analyze==&gt;General Lineal model==&gt;Multivariate 
+  <LI>Dependent Variable框<FONT lang=ZH-CN face=宋体 
+  size=3>：选入</FONT>tear_res、gloss和opacity 
+  <LI><FONT lang=ZH-CN face=宋体 size=3>Fixed Factors</FONT>框：选入extrusn和additive 
+  <LI>
+  <P align=left>单击OK </P></LI></OL>
+<P>此处两个自变量均是二分类变量，故无需选择两两比较方法。</P>
+<H3 style="TEXT-INDENT: 0px"><FONT color=#008080>8.4.2　结果解释<A 
+name=8.4.2></A></FONT></H3>
+<P>按上面的选择，分析结果如下：</P><B><FONT color=#ff0000 size=4>
+<P>General Linear Model</P></FONT></B>
+<P style="TEXT-INDENT: 0px"><B><FONT color=#ff0000 size=4><IMG height=151 src="" 
+width=187></FONT></B></P>
+<P><FONT color=#0000ff>这是引入模型的自变量的取值情况列表。</FONT></P>
+<P style="TEXT-INDENT: 0px"><B><FONT color=#ff0000 size=4><IMG height=447 src="" 
+width=620></FONT></B></P>
+<P><FONT 
+color=#0000ff>上表是针对模型中的自变量间及其交互作用所做的检验，采用的是四种多元检验方法。一般他们的结果都是相同的，如果不同，一般以Hotelling's 
+Trace方法的结果为准。可见在所用的模型中，extrusn和additive对结果变量是有统计学意义的，但交互作用无统计学意义。</FONT></P>
+<P style="TEXT-INDENT: 0px"><B><FONT color=#ff0000 size=4><IMG height=652 src="" 
+width=638></FONT></B></P>
+<P><FONT 
+color=#0000ff>上表实际上是四个一元方差分析表的合并，即分别考虑四个应变量时的方差分析结果。上面的多元方差分析已经得知两自变量对应变量有影响，从现在的分析表就可以更清楚的知道是对那些自变量影响较大。对照可知，extrusn和additive对tear 
+resistance和gloss都有较大影响，而他们的交互作用对gloss有影响，他们（及交互作用）对Opacity都没有影响。</FONT></P>
+<H2 style="TEXT-INDENT: 0px" align=center><FONT color=#0000ff>§8.5　重复测量的方差分析<A 
+name=8.5></A></FONT></H2>
+<P>重复测量的方差分析指的是一个应变量被重复测量好几次，从而同一个个体的几次观察结果间存在相关，这样就不满足普通分析的要求，需要用重复测量的方差分析模型来解决。</P>
+<H3 style="TEXT-INDENT: 0px"><FONT color=#008080>8.5.1　Repeated 
+measures对话框界面说明<A name=8.5.1></A></FONT></H3>
+<P>实际上，如果对普通方差分析模型作出正确的设置，两者的分析结果是完全相同的，即都正确，那么，重复测量的方差分析过程有何优势呢？我们通过下面的例子来看看：</P>
+<P><FONT color=#ff00ff>例8.3&nbsp; 
+在数据集anxity2.sav中判断：anxiety和tension对实验结果（即trial1~trial4）有无影响；四次试验间有无差异；试验次数和两个变量有无交互作用。</FONT></P>
+<P>anxity2.sav和anxity.sav实际上是同一个数据，但根据不同的分析目的采用了不同的数据排列方式。如果采用anxity.sav进行分析，我们可以分析四次试验间有无差异的问题，但对另两个问题就无能为力了，因为用普通的方差分析模型，anxity和tension的影响被合并到了subject中，根本就无法分解出来进行分析，这时，我们就只能求助于重复测量的方差分析模型。</P>
+<P>在菜单中选择Analyze==&gt;General Lineal model==&gt;Repeated 
+measures，系统首先会弹出一个重复测量因子定义对话框如下：</P>
+<P style="TEXT-INDENT: 0px" align=center><IMG height=229 src="" width=390 
+border=0></P>
+<P>因为是重复测量的模型，应变量被重复测量了几次，分别存放在几个变量中，所以我们这里要自行定义应变量。默认的名称为factor1，我们将其改为trail，下面的因素等级数填入4(因一共测量了四次)。单击Add钮，则该变量被加入，我们就完成了模型设置的第一步：应变量名称和测量次数定义。单击define，我们开始进行下一个步骤：具体重复测量变量定义及模型设置，对话框如下：</P>
+<P style="TEXT-INDENT: 0px" align=center><IMG height=503 src="" width=670 
+border=0></P>
+<P>这个对话框和我们以前看到的方差分析对话框不太一样：它没有应变量框，而是改为了组内效应框，实际上是一回事，上面我们定义了trial有四次测量，此处就给出了四个空让你填入相应代表四次测量的变量，选中trial1~trial4，将其选入；然后要选择自变量了（这里又将其称为了between 
+subjects 
+factor），将剩下的三个都选入即可。最后，根据题意，不需要检验anxity与tension的交互作用对试验次数有无交互作用，所以要在model中作相应设置，把那个东东拉出来。</P>
+<P>详细的操作步骤如下：</P>
+<OL>
+  <LI>Analyze==&gt;General Lineal model==&gt;Repeated measures 
+  <LI>Within-subject factor name框<FONT lang=ZH-CN face=宋体 
+  size=3>：键选入trial</FONT> 
+  <LI><FONT lang=ZH-CN face=宋体 size=3>number of levels</FONT>框：键入4 
+  <LI>
+  <P align=left>单击ADD钮 </P>
+  <LI>
+  <P align=left>单击DEFINE钮 </P>
+  <LI>
+  <P align=left>Within-subject variables (trial)框：选入trial1~trial4 </P>
+  <LI>
+  <P align=left>between subjects factor框：选入subject、anxity和tension </P>
+  <LI>
+  <P align=left>单击MODEL钮 </P>
+  <LI>
+  <P align=left>&nbsp; Custom单选钮：选中 </P>
+  <LI>
+  <P align=left>&nbsp; Within-subject Model框：选入trial </P>
+  <LI>
+  <P align=left>&nbsp; between subjects Model框：选入anxity和tension </P>
+  <LI>
+  <P align=left>&nbsp; 单击CONTINUE </P>
+  <LI>
+  <P align=left>单击OK </P></LI></OL>
+<P style="TEXT-INDENT: 0px"><FONT color=#808080><IMG height=16 src="" width=33 
+border=0> 请注意，这里没有选入变量subject，因为它实际上在这里成为了一个记录ID，要是将它选入，则什么都检验不了了。</FONT></P>
+<H3 style="TEXT-INDENT: 0px"><FONT color=#008080>8.5.2　结果解释<A 
+name=8.5.2></A></FONT></H3>
+<P>本题的分析结果如下：</P><B><FONT color=#ff0000 size=4>
+<P style="TEXT-INDENT: 0px">General Linear Model</P></FONT></B>
+<P style="TEXT-INDENT: 0px"><B><FONT color=#ff0000 size=4><IMG height=185 src="" 
+width=174></FONT></B></P>
+<P><FONT 
+color=#0000ff>上表给出了所定义的4次测量的变量名，在模型中它们都代表一个应变量trial，只是测量的次数不同而已。</FONT></P>
+<P style="TEXT-INDENT: 0px"><B><FONT color=#ff0000 size=4><IMG height=151 src="" 
+width=187></FONT></B></P>
+<P><FONT color=#0000ff>这是引入模型的其它自变量的情况列表。</FONT></P>
+<P style="TEXT-INDENT: 0px"><B><FONT color=#ff0000 size=4><IMG height=393 src="" 
+width=569></FONT></B></P>
+<P><FONT 
+color=#0000ff>上表是针对所检验的结果变量trial，以及他和另两个引入模型的自变量间的交互作用是否存在统计学意义，采用的是四种多元检验方法。一般他们的结果都是相同的，如果不同，我一般以Hotelling's 
+Trace方法的结果为准。可见在所用的模型中，trial的四次测量间的确是存在着统计学差异的，但它和另两个变量间的交互作用无统计学意义。</FONT></P>
+<P style="TEXT-INDENT: 0px"><B><FONT color=#ff0000 size=4><IMG height=282 src="" 
+width=685></FONT></B></P>
+<P><FONT 
+color=#0000ff>上表是球形检验，因为重复测量的方差分析模型要求所检验的应变量服从一种叫做球形分布的东东。上面可能有些内容不好懂，不过没关系，只要看到近似卡方为9.383，自由度为5，P值为0.097就可以了。因此trial是勉强服从球形分布的，可以进行重复测量的方差分析。</FONT></P>
+<P style="TEXT-INDENT: 0px"><B><FONT color=#ff0000 size=4><IMG height=438 src="" 
+width=617></FONT></B></P>
+<P><FONT 
+color=#0000ff>上面又用方差分析的方法对组内因素进行了检验，注意第一种为球形分布假设成立时的结果，就是我们所要看的。如果该假设不成立，则根据不同的情况可能看下面三种检验结果之一，或放弃该检验方法。</FONT></P>
+<P style="TEXT-INDENT: 0px"><B><FONT color=#ff0000 size=4><IMG height=354 src="" 
+width=544></FONT></B></P>
+<P><FONT 
+color=#0000ff>上表是非常重要的一部分：各次重复测量间变化趋势的模型分析，这里要求检验没有统计学意义，否则说明变化趋势不服从该曲线。以trial为例，对Linear的检验P值小于千分之一，Quadratic的P值略大于0.05。只有Cubic的P值在0.5附近，因此最佳的拟合曲线应为Cubic（三次方曲线）；但由于一共才四次测量，三次方曲线显然太奢侈了，因此</FONT><FONT 
+color=#ff0000>如果没有任何其它提示或专业上的知识</FONT><FONT 
+color=#0000ff>，最终的拟和曲线应为Quadratic（二次方曲线）。</FONT></P>
+<P style="TEXT-INDENT: 0px"><B><FONT color=#ff0000 size=4><IMG height=204 src="" 
+width=429></FONT></B></P>
+<P><FONT color=#0000ff>上表为最后一张，为组间效应的方差分析结果，可见anxiety和tension均无统计学意义。</FONT></P>
+<P>最后，为了再确认一下几次测量间的变化趋势，我们另外用plots子菜单作出模型估计的四次测量均数值如下图：</P>
+<P style="TEXT-INDENT: 0px"><IMG height=412 src="" width=502 border=0></P>
+<P>可见四次测量均数实际上还是近似于直线趋势的，因此前面的模型应为线性最佳。</P>
+<TABLE width=600 border=0>
+  <TBODY>
+  <TR>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/spss8a.htm">回第八章（上）</A></P></TD>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/index.htm">回教程首页</A></P></TD>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/spss9.htm">到第九章</A></P></TD></TR></TBODY></TABLE>
+<P>　</P></BODY></HTML>

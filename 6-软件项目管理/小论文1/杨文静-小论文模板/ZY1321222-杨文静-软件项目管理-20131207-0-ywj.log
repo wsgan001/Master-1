@@ -1,0 +1,113 @@
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=latex 2013.10.3)  7 DEC 2013 21:41
+entering extended mode
+**ZY1321222-杨文静-软件项目管理-20131207-0-ywj.tex
+
+(D:\杨文静\1-学位研究\10-课程学习\YWJ\6-软件项目管理\小论文1\杨文静-小论文模板\
+ZY1321222-杨文静-软件项目管理-20131207-0-ywj.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for loaded.
+
+(D:\杨文静\1-学位研究\10-课程学习\YWJ\6-软件项目管理\小论文1\杨文静-小论文模板\
+cumcmart.cls
+Document Class: cumcmart 2005/06/14 v050601, by Mao Ziyang
+(D:\CTEX\CTeX\tex\latex\cct\cctart.cls
+Document Class: cctart 2004/10/14 Derived from the `article' class
+(D:\CTEX\MiKTeX\tex\latex\base\article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(D:\CTEX\MiKTeX\tex\latex\base\size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(D:\CTEX\CTeX\tex\latex\cct\cctbase.sty
+Package: cctbase 2006/05/17
+ (D:\CTEX\CTeX\tex\latex\cct\CCT.sty
+0.61803 [2009/11/20] (D:\CTEX\CTeX\tex\latex\cct\cchead.sty
+\!ZihaoNo=\count87
+\ccwd=\dimen103
+\ccht=\dimen104
+\ccdp=\dimen105
+\!ccbox=\box26
+\!ccbdskip=\skip43
+)
+Package: CCT 2009/11/20 0.61803
+\@CCTcnta=\count88
+\@CCTcntb=\count89
+\@CCTlastkern=\count90
+\@CCTglue=\skip44
+\@CCTtoks=\toks14
+
+(D:\CTEX\CTeX\tex\latex\cct\CCT.cfg) (D:\CTEX\CTeX\tex\latex\cct\GBKkern.cfg)
+(D:\CTEX\CTeX\tex\latex\CJK\GB\c19song.fd) (\ziti{A}->gbksong)
+\@CCTskip=\skip45
+)))
+\displaytitle=\toks15
+\school=\toks16
+\authorone=\toks17
+\authortwo=\toks18
+\authorthree=\toks19
+\advisor=\toks20
+\c@theorem=\count91
+\c@proposition=\count92
+\c@lemma=\count93
+\c@corollary=\count94
+\c@definition=\count95
+\c@example=\count96
+)
+(D:\杨文静\1-学位研究\10-课程学习\YWJ\6-软件项目管理\小论文1\杨文静-小论文模板\
+ZY1321222-杨文静-软件项目管理-20131207-0-ywj.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+
+(D:\CTEX\CTeX\tex\latex\CJK\GB\c19hei.fd) (\ziti{B}->gbkhei)
+Warning: font `bs' not found, trying alternative font `hei'
+(\ziti{E}->gbkhei) Loading punctuation table gbksong.tbl [1
+
+]
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13.75> not available
+(Font)              size <14.4> substituted on input line 22.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <13.75> not available
+(Font)              size <14.4> substituted on input line 22.
+
+! TeX capacity exceeded, sorry [input stack size=5000].
+\@CCTtestpunct #1#2->{\@CCTcnta =`#1
+                                    \relax \ifnum \@CCTcnta >"A5 \global \@C...
+l.32 效地解决软件项目估算问题的方法\cite{阎巍-851}
+                                                  。
+If you really absolutely need more capacity,
+you can ask a wizard to enlarge me.
+
+ 
+Here is how much of TeX's memory you used:
+ 927 strings out of 495363
+ 11483 string characters out of 3184046
+ 87664 words of memory out of 3000000
+ 4098 multiletter control sequences out of 15000+200000
+ 20682 words of font info for 72 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 5000i,4n,9999p,218b,297s stack positions out of 5000i,500n,10000p,200000b,50000s
+Output written on ZY1321222-杨文静-软件项目管理-20131207-0-ywj.dvi (1 page, 379
+2 bytes).

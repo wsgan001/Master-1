@@ -1,0 +1,475 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0052)http://dc.cpgl.net/study/otherstudy/spss10/spss5.htm -->
+<!-- saved from url=(0055)spss5.htm --><HTML><HEAD><TITLE>第五章：SPSS统计绘图功能详解</TITLE>
+<META http-equiv=Content-Language content=zh-cn>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="MSHTML 6.00.2900.2995" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId></HEAD>
+<BODY style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 30px">
+<H1 style="TEXT-INDENT: 0px" align=center><FONT color=#000080 
+size=5>第五章：SPSS统计绘图功能详解</FONT></H1>&lt; 
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss5.htm#5.1"><B>5.1<FONT 
+color=#0000ff>　</FONT>常用统计图</B></A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss5.htm#5.1.1">5.1.1<FONT 
+color=#0000ff>　操作界面介绍</FONT>（条图）</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss5.htm#5.1.1.1">5.1.1.1<FONT 
+color=#0000ff>　</FONT>条图的通用界面</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss5.htm#5.1.1.2">5.1.1.2<FONT 
+color=#0000ff>　</FONT>复式条图与分段条图的界面</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss5.htm#5.1.2">5.1.2<FONT 
+color=#0000ff>　</FONT>其他常用统计图</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss5.htm#5.1.2.1">5.1.2.1<FONT 
+color=#0000ff>　</FONT>散点图</A> 
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss5.htm#5.1.2.2">5.1.2.2<FONT 
+color=#0000ff>　</FONT>线图</A> 
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss5.htm#5.1.2.3">5.1.2.3<FONT 
+color=#0000ff>　</FONT>饼图</A> 
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss5.htm#5.1.2.4">5.1.2.4<FONT 
+color=#0000ff>　</FONT>面积图</A> 
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss5.htm#5.1.2.5">5.1.2.5<FONT 
+color=#0000ff>　</FONT>直方图</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss5.htm#5.1.2.6">5.1.2.6<FONT 
+color=#0000ff>　</FONT>其他</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss5.htm#5.1.3">5.1.3<FONT 
+color=#0000ff>　</FONT>常用统计图编辑方法详解</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss5.htm#5.2"><B>5.2<FONT 
+color=#0000ff>　</FONT>交互式统计图</B></A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss5.htm#5.3"><B>5.3<FONT 
+color=#0000ff>　</FONT>统计地图</B></A></P>
+<P>在常用的统计软件中，SAS绘制的统计图不太美观；而SPSS绘制的统计图较为美观，可以满足大多数情况下的要求；STATA绘制的统计图形最为精美，但由于它采用命令行方式操作，美观的图形需要添加大量选项，普通人不易掌握；而S-PLUS、MATHLAB等偏数理统计的软件虽然绘图能力也非常强，但由于自身的定位问题，并不为大多数人所熟悉。因此，在各种统计软件中，以SPSS制作的统计图应用最为广泛。</P>
+<P><FONT color=#808080><IMG height=16 src="第五章：SPSS统计绘图功能详解.files/hand.gif" 
+width=33 align=absMiddle border=0> 
+EXECL的统计绘图功能非常的强，我们还有必要学习SPSS的绘图功能吗？<BR>这个问题我的看法是：EXCEL由于它的纯中文界面和简单而强大的绘图功能，使得可以用它来直接绘制各种简单的统计图，但是，EXCEL可以直接绘制的统计图种类有限，象误差条图、自回归图等它就无能为力，即是它支持的线图、条图等，如果过于复杂，如叠式条图、累计条图等也无法作出，而这些图在统计中是经常会碰到的，此时就只有采用统计软件来绘制，SPSS就是其中的佼佼者。</FONT></P>
+<H2 style="TEXT-INDENT: 0px" align=center><FONT color=#0000ff>§5.1　常用统计图<A 
+name=5.1></A></FONT></H2>
+<P>在SPSS 
+10.0版中，除了生存分析所用的生存曲线图被整合到ANALYZE菜单中外，其他的统计绘图功能均放置在graph菜单中。该菜单具体分为以下几部分：</P>
+<UL>
+  <LI>
+  <P 
+  style="TEXT-INDENT: 0px">Gallery：相当于一个自学向导，将统计绘图功能做了简单的介绍，初学者可以通过它对SPSS的绘图能力有一个大致的了解。</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Interactive：交互式统计图，这是SPSS 9.0版新增的内容。</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Map：统计地图，这是SPSS 10.0版新增的内容。</P></LI></UL>
+<P><FONT color=#808080><IMG height=16 src="第五章：SPSS统计绘图功能详解.files/hand.gif" 
+width=33 align=absMiddle border=0> 市面上所能见到的SPSS 10.0 
+D版由于执照不全，并不能安装统计地图模块。</FONT></P>
+<UL>
+  <LI>
+  <P style="TEXT-INDENT: 0px">下方的其他菜单项是我们最为常用的普通统计图，具体来说有：</P></LI></UL>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=1 border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=30 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.1.gif" width=30 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">条图</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=29 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.2.gif" width=30 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">散点图</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=30 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.3.gif" width=30 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">线图</P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=30 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.4.gif" width=30 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">直方图</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=30 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.7.gif" width=30 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">饼图</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=30 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.5.gif" width=30 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">面积图</P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=30 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.15.gif" width=30 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">箱式图</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=30 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.8.gif" width=30 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">正态Q-Q图</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=30 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.6.gif" width=30 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">正态P-P图</P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=30 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.13.gif" width=30 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">质量控制图</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=30 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.11.gif" width=30 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">Pareto图</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=30 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.12.gif" width=30 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">自回归曲线图</P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=30 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.9.gif" width=30 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">高低图&nbsp;</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=30 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.14.gif" width=30 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">交互相关图</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=30 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.10.gif" width=30 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">序列图</P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=30 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.16.gif" width=30 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">频谱图</P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=30 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.17.gif" width=30 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px">误差线图</P></TD>
+    <TD></TD>
+    <TD></TD></TR></TBODY></TABLE></CENTER></DIV>
+<P>　其中后面几种图形用于时间序列分析。我们的讲解将这些常规统计图为主，对交互式统计图和统计地图只举例介绍，就不再全面讲述了。</P>
+<P>我们所用的数据集为SPSS自带的anxiety.sav，本章的大多数例子都将围绕该数据集展开。</P>
+<H3 style="TEXT-INDENT: 0px"><FONT color=#008080>5.1.1&nbsp; 操作界面介绍（条图）<A 
+name=5.1.1></A></FONT></H3>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">5.1.1.1&nbsp; 
+条图的通用界面<A name=5.1.1.1></A></P>
+<P>由于不同图形的绘图对话框有相当强的共性，下面我们通过一个简单的例子来看看绘图菜单的大致界面是怎么样的，通过这个例子大家可以举一反三。</P>
+<P><FONT 
+color=#ff00ff>例5.1：在数据集anxiety.sav中分不同的subject对变量score值（之和）绘制条图。</FONT></P>
+<P>选择graphs==&gt;bar后，系统首先会弹出一个简单的导航对话框如下所示：</P>
+<DIV align=center>
+<CENTER>
+<TABLE style="TEXT-INDENT: 0px" height=294 cellSpacing=1 border=0>
+  <TBODY>
+  <TR>
+    <TD align=right height=36></TD>
+    <TD height=290 rowSpan=9>
+      <P align=center><IMG height=321 src="第五章：SPSS统计绘图功能详解.files/spss5.18.gif" 
+      width=280 border=0></P></TD></TR>
+  <TR>
+    <TD align=right height=38><FONT face=楷体_GB2312 
+    size=2>绘制简单条图（单式条图）</FONT></TD></TR>
+  <TR>
+    <TD align=right height=36><FONT face=楷体_GB2312 size=2>绘制复式条图</FONT></TD></TR>
+  <TR>
+    <TD align=right height=38><FONT face=楷体_GB2312 
+    size=2>绘制堆积条图（分段条图）</FONT></TD></TR></CENTER>
+  <TR>
+    <TD align=right height=38>
+      <P align=right><FONT face=楷体_GB2312>定义统计图中数据的表达类型：</FONT></P></TD></TR>
+  <CENTER>
+  <TR>
+    <TD align=right height=19><FONT face=楷体_GB2312 
+      size=2>条图反映了同一变量若干条记录的分组汇总</FONT></TD></TR>
+  <TR>
+    <TD align=right height=20><FONT face=楷体_GB2312 
+    size=2>条图反映了不同变量的汇总</FONT></TD></TR>
+  <TR>
+    <TD align=right height=19><FONT face=楷体_GB2312 
+  size=2>条图反映了个体观察值</FONT></TD></TR>
+  <TR>
+    <TD align=right height=18></TD></TR></TBODY></TABLE></CENTER></DIV>
+<P>在该对话框中，SPSS将条图进行了大致的分类，对话框的上半部分用于选择条图类型，下半部分的Data in Chart 
+are单选框组用于定义条图中数据的表达类型。这里根据我们所需绘制条图的类型，应该选择简单条图，在表达类型中则应选择"Summaries for groups 
+of cases"。选好后单击DEFINE钮，系统开启正式的条图定义对话框如下：</P>
+<P style="TEXT-INDENT: 0px" align=center><IMG height=391 
+src="第五章：SPSS统计绘图功能详解.files/spss5.19.gif" width=646 border=0></P>
+<P>对话框左侧为通用的侯选变量列表框，右侧的对话框元素依次解释如下：</P>
+<P><FONT lang=ZH-CN face=宋体 size=3>【</FONT>Bars Represent单选框组<FONT lang=ZH-CN 
+face=宋体 size=3>】</FONT></P>
+<P>用于定义条图中直条所代表的含义，可以是样本例数、样本数所占的百分比、累计样本例数、累计样本数所占的百分比或其余汇总函数，在例5.1中我们要对变量score的值绘图，因此选择最后一项"Other 
+summary function"，系统开启summary function对话框如下所示：</P>
+<P style="TEXT-INDENT: 0px" align=center><IMG height=405 
+src="第五章：SPSS统计绘图功能详解.files/spss5.20.gif" width=516 border=0></P>
+<P>该对话框中列出了更多的统计汇总函数，可以满足绝大多数情况的需要。具体有：</P>
+<UL>
+  <LI>
+  <P 
+  style="TEXT-INDENT: 0px">上部：包括大多数常用统计汇总函数，如均数、标准差、中位数、方差、众数、最大、最小值、样本例数、变量值之和、累计变量值。</P>
+  <LI>
+  <P 
+  style="TEXT-INDENT: 0px">中部：可对各记录按大小进行筛选，如上侧百分之多少，或者只选择小于某个数值的记录。具体的数值在value框中输入。</P>
+  <LI>
+  <P 
+  style="TEXT-INDENT: 0px">下部：可按数值大小值选择取值在某个范围内的记录，具体的范围在low和high框中输入。</P></LI></UL>
+<P style="TEXT-INDENT: 0px"><FONT color=#808080><IMG height=26 
+src="第五章：SPSS统计绘图功能详解.files/book.gif" width=29 align=absMiddle border=0> 
+注意上面的一些函数是和前面重复的，如样本例数。</FONT></P>
+<P>此外，对话框最下侧还有一个Values are grouped midpoints复选框，当选中median of 
+values或percentile单选框时该框变为可选，选中则表明数据为频数表格式，所输入的数值为组中值。</P>
+<P>根据我们的目的，这里选择sum of values单选框，单击continue后系统回到上一个对话框。</P>
+<P><FONT lang=ZH-CN face=宋体 size=3>【</FONT>Category Axis框<FONT lang=ZH-CN 
+face=宋体 size=3>】</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 
+size=3>用于选择所需的分类变量，此处必选。这里根据要求，将subject选入，可以见到此时OK已经变黑可用了。</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 size=3>【</FONT>Template框<FONT lang=ZH-CN face=宋体 
+size=3>】</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 size=3>用于选择绘制条图的模板，一般较少用。</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 size=3>【</FONT>Titles钮<FONT lang=ZH-CN face=宋体 
+size=3>】</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 
+size=3>用于输入统计图的标题和脚注，最多可以输入两行主标题，一行副标题，两行脚注。</FONT></P>
+<P><FONT lang=ZH-CN face=宋体 size=3>【</FONT>Options钮<FONT lang=ZH-CN face=宋体 
+size=3>】</FONT></P>
+<P>弹出Options对话框，用于定义相关的选项，有：</P>
+<UL type=circle>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Confidence Interval框 
+  输入需要计算的均数差值可信区间范围，默认为95%。如果是和总体均数为0相比，则此处计算的就是样本所在总体均数的可信区间。</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Missing Values单选框组 
+  定义分析中对缺失值的处理方法，可以是具体分析用到的变量有缺失值才去除该记录（Excludes cases analysis by 
+  analysis），或只要相关变量有缺失值，则在所有分析中均将该记录去除(Excludes cases 
+  listwise)。默认为前者，以充分利用数据。</P></LI></UL>
+<P>现在，我们已经完成了绘制该图所需的工作，单击OK，系统绘出统计图如下：</P>
+<P style="TEXT-INDENT: 0px" align=center><IMG height=320 
+src="第五章：SPSS统计绘图功能详解.files/spss5.24.gif" width=400 border=0></P>
+<P>至于Data inChart Are中的另两种情况Summaries of separate variables和Values of individual 
+cases，其对话框界面极为简单，可以说是一目了然，这里不再多讲，只指出以下几点：</P>
+<UL>
+  <LI>
+  <P style="TEXT-INDENT: 0px">在Summaries of separate variables的对话框中，可以用Change 
+  summary钮更改汇总函数。</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">在Values of individual cases的对话框中，下方category 
+  labels的选择并不影响做出直条的多少，只会影响X轴表示的内容，默认是记录号。</P></LI></UL>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">5.1.1.2&nbsp; 
+复式条图与分段条图的界面<A name=5.1.1.2></A></P>
+<P>复式条图与分段条图的界面并非全新的东西，只是在前面的简单界面上增加了一些元素，让我们再通过一个例子来看看：</P>
+<P><FONT 
+color=#ff00ff>例5.2：在数据集anxiety.sav中分不同的subject对变量score值（之和）绘制条图，并且按变量trial的不同取值堆积（分段）：</FONT></P>
+<P>由于要按变量trial的不同取值分段，因此在导航对话框中就不能选simple，而应根据目的选择stacked，单击define后系统开启的条图定义对话框和我们前面所用的略有不同，具体来说在Category 
+Axis框附近不同，现在Category Axis框下面多了些东西如下所示：</P>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=1 width=600 border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=center><IMG height=101 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.22.gif" width=228 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px" align=center><IMG height=101 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.21.gif" width=234 border=0></P></TD></TR>
+  <TR>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">选择stacks时的情况</P></TD>
+    <TD align=middle>
+      <P 
+style="TEXT-INDENT: 0px">选择clusters时的情况</P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<P>显然，当需要做复式条图时，将所需的分类变量选入stacks框中即可，做分段条图的情况也与此类似。</P>
+<P>以例 5.2为例，其操作步骤如下：</P>
+<OL>
+  <LI>Graphs==&gt;bar 
+  <LI>Clustered：选中 
+  <LI>Summarizes for groups of variables单选框：选中 
+  <LI>单击Define 
+  <LI>&nbsp; Bars repesent框：选入score。 
+  <LI>&nbsp; Other summary function单选框：选中 
+  <LI>&nbsp; Variable框：选入subject 
+  <LI>&nbsp; Change summary钮：单击 
+  <LI>&nbsp;&nbsp;&nbsp; Sum of values单选框：单击 
+  <LI>&nbsp;&nbsp;&nbsp; 单击continue钮 
+  <LI>&nbsp; Category Axis框：选入subject 
+  <LI>&nbsp; Define stacks by框：选入trial 
+  <LI>&nbsp; 单击OK</LI></OL>
+<P>绘出的条图如下所示：</P>
+<P style="TEXT-INDENT: 0px" align=center><IMG height=320 
+src="第五章：SPSS统计绘图功能详解.files/spss5.23.gif" width=400 border=0></P>
+<P>但是，在Values of individual cases的对话框中情况有些不同，原先Bars 
+repersent框只能选入一个变量，做复式条图和分段条图时该框中可以选入多个变量了，其他的内容不变。</P>
+<H3 style="TEXT-INDENT: 0px"><FONT color=#008080>5.1.2&nbsp; 其他常用统计图<A 
+name=5.1.2></A></FONT></H3>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">5.1.2.1&nbsp; 
+散点图<A name=5.1.2.1></A> 
+<P>散点图是各种统计图中比较简单的一种，共分为simple、matrix（以矩阵的形式显示多个变量间两两的散点图）、overlay（将多个变量间两两的散点图同时做在一张图上）和3D（将X、Y、Z三个变量间的相关散点图做在一个立体空间中）四种，其中需要解释的比较特殊的内容有：</P>
+<UL>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Set marks 
+  by框：选入一个标记变量，根据该变量取致的不同对同一个散点图中的各点标以不同的颜色（或形状），例如在数据cars中我们以horse和weight做图，如果用orgion的大小来做marks，则两次做出的图如下：</P></LI></UL>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=1 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="50%">
+      <P style="TEXT-INDENT: 0px"><IMG height=243 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.25.gif" width=300 border=0></P></TD>
+    <TD width="50%">
+      <P style="TEXT-INDENT: 0px"><IMG height=242 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.26.gif" width=300 border=0></P></TD></TR>
+  <TR>
+    <TD align=middle width="50%">
+      <P style="TEXT-INDENT: 0px">没有mark变量时的情况</P></TD>
+    <TD align=middle width="50%">
+      <P 
+style="TEXT-INDENT: 0px">用orgion做mark变量时的情况</P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<UL>
+  <LI>
+  <P style="TEXT-INDENT: 0px">Label 
+  cases框：当编辑图形在图形选项中选择显示labels时，图形默认显示记录号，如果在这里选择了label变量，则显示该变量的取值。</P>
+  <LI>
+  <P style="TEXT-INDENT: 0px">做出的3D图形可以在编辑时进行三维旋转，从多个角度进行观察。</P></LI></UL>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">5.1.2.2&nbsp; 
+线图<A name=5.1.2.2></A> 
+<P>线图实际上和条图是一回事，可以认为它就是条图的变形，条图是用直条的高低表示多少，而线图是用点的高低来表示，然后又用直线将各点连接而成。</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">5.1.2.3&nbsp; 
+饼图<A name=5.1.2.3></A> 
+<P>饼图的做法简直太简单了，不值一提！</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">5.1.2.4&nbsp; 
+面积图<A name=5.1.2.4></A> 
+<P>面积图的做法是和线图、饼图类似的，比如堆积面积图是将各个指标值相加而成，和分段式条图非常类似。</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">5.1.2.5&nbsp; 
+直方图<A name=5.1.2.5></A></P>
+<P>直方图用于观察某个变量的分布情况，如果选择了display normal 
+curve复选框，则会同时做出一条当前变量理想状况的正态分布曲线来，和该曲线相比，你就可以知道变量的实际分布究竟差了多远。</P>
+<P style="TEXT-INDENT: 0px" align=center><IMG height=329 
+src="第五章：SPSS统计绘图功能详解.files/spss5.27.gif" width=400 border=0></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px">5.1.2.6&nbsp; 
+其他<A name=5.1.2.6></A></P>
+<P>P-P图和Q-Q图都是用来观察变量是否服从正态分布的；质量控制图则用来观察个体值是否有超过正常值范围的情况出现；箱式图的作用和它类似，只是换了一种表达方式；其余的几种图几乎都是用与时间序列模型的。</P>
+<H3 style="TEXT-INDENT: 0px"><FONT color=#008080>5.1.3&nbsp; 常用统计图编辑方法详解<A 
+name=5.1.3></A></FONT></H3>
+<P>该部分内容请参见4.5节：图片编辑方法详解。</P>
+<H2 style="TEXT-INDENT: 0px" align=center><FONT color=#0000ff>§5.2 交互式统计图<A 
+name=5.2></A></FONT></H2>
+<P>交互式统计图是SPSS 
+8.0版新增的绘图类型，包括了交互式条图、线图、面积图、饼图、散点图、箱式图、误差限图和和直方图共七种类型，那么，这种新的统计图类型和普通的统计图相比有什么优越性，或者说，它的主要卖点--交互性都体现在哪里呢？</P>
+<P>在我看来，"交互式"这三个字主要体现在以下几个方面：</P>
+<UL>
+  <LI>
+  <P 
+  style="TEXT-INDENT: 0px">对话框的交互。它的对话框全部采用拖方式操作，并且每一个元素的可操作性都大大强于普通对话框，以前需要两至三层对话框才能完成的工作，现在在一层对话框中就可以完成了。</P>
+  <LI>
+  <P 
+  style="TEXT-INDENT: 0px">图形内容的交互。在技术上，普通统计图存储的是图形元素，因此编辑时只能就图形元素的特征，如颜色、线型等加以修改；而现在的交互式统计图完全不同，它存储的是原始数据或者绘图用的中间结果（如均数、标准差等），因此当图形绘制完毕后仍能对图形进行彻底更改，如加入锌的变量（在散点图中加入标示变量，甚至二维变三维）、删除某一部分数据、甚至改变所会图形的基本类型，如将条图改绘为线图等，只要所需信息相同，随你如何转换！不但如此，由于这个存储特点，现在我们还可以绘出以前无法直接得到的图形，如将一个数据透视表的内容用图形来表示！</P></LI></UL>
+<TABLE cellSpacing=1 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD colSpan=2>
+      <P style="TEXT-INDENT: 0px" align=center><IMG height=108 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.29.gif" width=511></P></TD></TR>
+  <TR>
+    <TD colSpan=2>
+      <P style="TEXT-INDENT: 0px" align=center>哈哈，统计表，我们要拿你来做图！</P></TD></TR>
+  <TR>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=299 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.28.gif" width=300 border=0></P></TD>
+    <TD>
+      <P style="TEXT-INDENT: 0px"><IMG height=361 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.30.gif" width=301 border=0></P></TD></TR>
+  <TR>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">这就是做出的交互式统计图</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px">把它转成三维怎么样？</P></TD></TR></TBODY></TABLE>
+<UL>
+  <LI>
+  <P 
+  style="TEXT-INDENT: 0px">增强的图形编辑能力。同样由于它的存储特点，现在交互式统计图的图形编辑能力达到了有恃无恐的地步！几乎任何东西都可以拿来改，也可以往里添加许多辅助线，如下面所示的一样：</P></LI></UL>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px" align=center><IMG height=204 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.31.gif" width=200 border=0></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px" align=center><IMG height=202 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.2.jpg" width=200 border=0></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px" align=center><IMG height=205 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.3.jpg" width=200 border=0></P></TD></TR>
+  <TR>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px" align=center>朴素的美</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px" align=center>削尖脑袋的模样</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px" align=center>墙上长满了爬山虎</P></TD></TR>
+  <TR>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px" align=center><IMG height=231 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.4.jpg" width=200 border=0></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px" align=center><IMG height=258 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.32.gif" width=200 border=0></P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px" align=center><IMG height=242 
+      src="第五章：SPSS统计绘图功能详解.files/spss5.33.gif" width=200 border=0></P></TD></TR>
+  <TR>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px" align=center>太阳照在红墙内外</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px" align=center>反客为主的蓝飘带</P></TD>
+    <TD align=middle>
+      <P style="TEXT-INDENT: 0px" 
+align=center>我没有放倒！</P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<P>请注意,最后一幅图是在三维实时旋转时截取的（三维实时旋转也是交互式统计图新增的功能之一），因为如果我不这样做，它可能会那样一直旋转下去，我这样也算是挽救了他吧！</P>
+<H2 style="TEXT-INDENT: 0px" align=center><FONT color=#0000ff>§5.3 统计地图<A 
+name=5.3></A></FONT></H2>
+<P>统计地图是 SPSS 
+10.0的新增功能，如果用时髦的说法就应该是"地球物理信息系统"，不过我喜欢用朴素的名称。该功能可以将收集到的数据和地图相联系，从而绘出统计地图来。该功能共分为区域值统计地图、渐近符号统计地图、点密度统计地图、个体值统计地图、分类计数条图统计地图、饼图统计地图和多主题统计地图七种。但是，如同我在<A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss10new.htm">SPSS 
+10.0抢鲜报道</A>中提到过的一样，该地图集关于中国的部分简直就是一塌糊涂，所以对国内用户来说它更多的使用来玩，而不是工作。</P>
+<P>统计地图在操作上和交互式统计图完全一致，实际上，它就是一类特殊的交互式统计图。它所用的数据集应该和所选的地图相对应，否则会给出错误信息，并停止做图。这是用SPSS附带的亚州数据集做出的亚洲国家人口点密度图：</P>
+<P align=center><B><IMG height=300 src="第五章：SPSS统计绘图功能详解.files/spss5.44.gif" 
+width=400></B></P>
+<P>SPSS 在根目录下的MapData目录中放有许多绘制统计地图用的数据集，有兴趣的朋友可以自己做几个图试试。</P>
+<TABLE width=600 border=0>
+  <TBODY>
+  <TR>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/spss4.htm">回第四章</A></P></TD>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/index.htm">回教程首页</A></P></TD>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/spss6.htm">到第六章</A></P></TD></TR></TBODY></TABLE>
+<P>　</P></BODY></HTML>

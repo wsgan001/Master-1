@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0052)http://dc.cpgl.net/study/otherstudy/spss10/spss3.htm -->
+<!-- saved from url=(0055)spss3.htm --><HTML><HEAD><TITLE>第三章：程序编辑窗口用法详解</TITLE>
+<META http-equiv=content-type content=text/html;charset=GB2312>
+<META content="MSHTML 6.00.2900.2995" name=GENERATOR></HEAD>
+<BODY bgColor=white>
+<CENTER>
+<H1><FONT color=navy size=5>第三章：程序编辑窗口用法详解</FONT></H1></CENTER>
+<CENTER></CENTER>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss3.htm#3.0.1">3.0.1　程序编辑窗口界面</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss3.htm#3.0.2">3.0.2　邂逅Paste按钮</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss3.htm#3.0.3">3.0.3　用程序编辑窗口加快我们的工作</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss3.htm#3.0.4">3.0.4　用程序编辑窗口完成对话框无法完成的工作</A></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><A 
+href="http://dc.cpgl.net/study/otherstudy/spss10/spss3.htm#3.0.5">3.0.5　再罗嗦几句</A></P>
+<P>在某年某月的某一天，你和你的另一半正在街上为地球表面的平整而贡献自己的绵薄之力。突然（也许是必然），你觉得有些饿了。这是一个问题，当然，不用说大家也知道解决问题的方法就是－－吃。不过就是吃也有讲究，可以随便找个面馆简单的填饱肚子；要求高的话还可以去几星级的地方享受一下；当然还有的人觉得自己回去做口味也合适，花费也不多；更有些超级美食家，星级水准也不满意，需要亲自给一级厨师露一手，指点他们一下，才会吃的满意。</P>
+<P>好，使用SPSS进行统计分析的方式就象上面填饱肚子的方法一样有几种选择，如果你烹饪工夫还欠火候，或者习惯了享受星级服务，那么直接使用SPSS为你提供的对话框进行操作就是了；而如果你习惯了DIY，甚或对话框也无法满足你的统计分析要求（别瞪眼，下面你就会看到了），就请你在本章学习一下如何写SPSS程序吧。</P>
+<P>什么？SPSS还有程序？！是的，如果大家以前用过SPSS/PC+ 
+4.0，就一定不会对SPSS的程序感到陌生：在那个非常遥远的DOS时代（大约15年前），学习SPSS程序的语法，掌握如何编写SPSS程序是熟练使用SPSS的必要条件（但还不充分）。随着Windows旋风的登陆，软件的易操作性被推进到了前所未有的高度，而SPSS显然是统计软件中做的最成功的一个。他的操作界面是如此的成功，让使用者可以完全无须了解SPSS的语法而使用其99%的功能，使得SPSS程序被人逐渐忘记。其实，适当的使用SPSS程序可以大大提高我们的工作效率，并且SPSS在设计时也充分注意到了编程功能和使用界面的结合－－还记得Paste按钮吗？下面我们就结合几个实例来学习如何使用程序编辑窗口。</P>
+<P><FONT color=gray><IMG height=26 src="第三章：程序编辑窗口用法详解.files/book.gif" width=29 
+align=absMiddle> 
+请注意：我们不准备教大家那些枯燥的SPSS语法，现在写SPSS程序就象在WORD中记录宏一样简单，所需要做的只是略加修改而已。</FONT></P>
+<H3><FONT color=#008080>3.0.1 程序编辑窗口界面<A name=3.0.1></A></FONT></H3>
+<P>选择菜单File==&gt;new==&gt;syntax，系统会开启一个新的程序编辑窗口如下：</P>
+<CENTER>
+<P><IMG height=300 src="第三章：程序编辑窗口用法详解.files/spss3.1.gif" 
+width=421></P></CENTER>
+<DIV align=left>
+<P><FONT color=gray><IMG height=26 src="第三章：程序编辑窗口用法详解.files/book.gif" width=29 
+align=absMiddle> Syntax从字面上应该翻译为句法、语法的意思，这里从实际用途出发，翻译为程序。</FONT></P></DIV>
+<DIV align=left>
+<P>和以前见过的数据管理窗口相比，这个窗口简单的不能再简单了。菜单项中的File、Edit、View、Analyze、Graphs等菜单都是通用的，唯一特殊的是Run菜单，该窗口的特殊功能均在这里实现。</P></DIV>
+<DIV align=left>
+<H3><FONT color=#008080>3.0.2 邂逅Paste按钮<A name=3.0.2></A></FONT></H3></DIV>
+<DIV align=left>
+<P>Paste按钮在几乎所有SPSS对话框中均存在，它是专门为编程准备的。以第一章的那个<I>t</I>检验为例，如果最终选择完毕后不单击OK而是单击Paste，则程序编辑窗中会自动生成以下语句：</P></DIV>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><FONT 
+color=blue>T-TEST</FONT></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><FONT color=blue>　GROUPS=group(1 
+2)</FONT></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><FONT 
+color=blue>　/MISSING=ANALYSIS</FONT></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><FONT 
+color=blue>　/VARIABLES=x</FONT></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><FONT 
+color=blue>　/CRITERIA=CIN(.95) .</FONT></P>
+<DIV align=left>
+<P>这就是你刚才想做的工作，如果运行它，就可以得到<I>t</I>检验的结果！怎么运行？选择菜单Run==&gt;all，看到了吗？</P></DIV>
+<P><FONT color=gray><IMG height=26 src="第三章：程序编辑窗口用法详解.files/book.gif" width=29 
+align=absMiddle> 
+Paste按钮如何能生成程序？在SPSS中，操作界面实际上起的就是"操作界面"的作用。当你用对话框选定某项操作，单击OK后，SPSS就将你的选择翻译成程序语句，然后提交系统执行。如果你单击Paste按钮，SPSS就不将生成的程序语句提交执行，而是传送到程序编辑窗中供你折腾。说的再广一些，不光SPSS，SAS等其他统计软件也是这么做的。</FONT></P>
+<P><FONT color=gray><IMG height=26 src="第三章：程序编辑窗口用法详解.files/book.gif" width=29 
+align=absMiddle> 
+从上面的语句可以看到SPSS程序的基本结构：一条语句可占多行，最前面为语句主体，具体的选项用斜杠和语句主体相连，最后用小数点结束语句。</FONT></P>
+<H3><FONT color=#008080>3.0.3 用程序编辑窗口加快我们的工作<A name=3.0.3></A></FONT></H3>
+<P>如果程序编辑窗口只能带来"暂停"功能的话，我也就不用再往下写了。幸好，它的作用还远不止与此。当需要成批次的处理数据时，当你需要重复进行相同的统计分析时，当你要做许多统计分析，每一步均费时较长而你又不想等时...，使用Paste按钮是你的救命稻草。仍以第一章为例，如果从预分析一开始就连续使用Paste按钮，则到分析结束我们会得到如下程序：</P>
+<P><FONT color=#0000ff>DESCRIPTIVES<BR>　VARIABLES=x<BR>　/STATISTICS=MEAN STDDEV 
+MIN MAX .<BR>SORT CASES BY group .<BR>SPLIT FILE<BR>　SEPARATE BY group 
+.<BR>　DESCRIPTIVES<BR>　VARIABLES=x<BR>　/STATISTICS=MEAN STDDEV MIN MAX 
+.<BR>GRAPH<BR>　/HISTOGRAM=x .<BR>T-TEST<BR>　GROUPS=group(1 
+2)<BR>　/MISSING=ANALYSIS<BR>　/VARIABLES=x<BR>　/CRITERIA=CIN(.95) .</FONT></P>
+<P>现在你可以再次启用Run菜单来一次完成所需的统计分析。特别的，如果你的数据还会不断添加（试验尚未结束），就可以把该程序存为程序文件（*.sps），下次读入新数据后再运行一次就可以直接得到新的结果。</P>
+<P><FONT color=gray><IMG height=26 src="第三章：程序编辑窗口用法详解.files/book.gif" width=29 
+align=absMiddle> Run菜单几个选项的含义分别为：</FONT></P>
+<UL>
+  <LI><FONT color=gray>ALL 运行全部程序。</FONT> 
+  <LI><FONT color=gray>SELECTION 运行所选择的程序语句。</FONT> 
+  <LI><FONT color=gray>CURRENT 运行当前光标所在行的语句。</FONT> 
+  <LI><FONT color=gray>TO END 从当前语句起一直运行到程序结束。</FONT></LI></UL>
+<H3><FONT color=#008080>3.0.4 用程序编辑窗口完成对话框无法完成的工作<A name=3.0.4></A></FONT></H3>
+<P>如果程序编辑窗口的本事只限于上面介绍的这一点，那么在Windows时代，它仍然不配我来专门写一章。还记得吗？上面我提到用SPSS的图形界面可以完成99%的工作，可有时候你偏偏需要用另外那1%的功能，请看下面的例子：</P>
+<P>例3.1 
+请打开SPSS提供的cars.sav数据，假设每条记录代表一辆车，现在将按下列条件挑选一些车出来：Year&lt;=76、Cylinder&lt;=4、Weight&gt;=3000，并且要看看每辆车符合了以上三条要求中的几条。</P>
+<P>解：没有什么难的，从第二章的知识我们了解到Count对话框就是做这类事情的，好，在Count对话框进行操作如下：</P>
+<OL>
+  <LI>Target variable框：键入G1（新变量名） 
+  <LI>Numeric variable框：选入Year 
+  <LI>单击Define values钮： 
+  <LI>　Range lowest through：键入76：单击ADD钮 
+  <LI>　单击Continue钮 
+  <LI>Numeric variable框：选入cylinder 
+  <LI>单击Define values钮： 
+  <LI>　Range lowest through：键入4：单击ADD钮 
+  <LI>　单击Continue钮 
+  <LI>Numeric variable框：选入Weight 
+  <LI>单击Define values钮 
+  <LI>　Range through higest：键入3000：单击ADD钮 
+  <LI>　单击Continue钮 
+  <LI>单击OK</LI></OL>
+<P>好了，做完了－－不过好象不大对劲呀！怎么前面做的条件选择在后面定义的时候仍然出现？再看看结果，更不对了！看来有问题。毛病出在哪里呢？请再次开启Count对话框，选择好的条件仍然在里面，单击Paste钮，可以看到这些选择产生的SPSS语句如下：</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><FONT 
+color=#0000ff>COUNT</FONT></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><FONT 
+color=#0000ff>　G1 = year cylinder weight (Lowest thru 76) year cylinder weight 
+(Lowest</FONT></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><FONT 
+color=#0000ff>　thru 4) year cylinder weight (3000 thru Highest) .</FONT></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><FONT 
+color=#0000ff>EXECUTE .</FONT></P>
+<P>仔细看看，这个语句不对呀！明明Lowest thru 76应该是对变量Year的限制，怎么year、cylinder、weight 
+这三个变量都在它前面？再看另两个条件，一样"大家有份"，这还了得，改！将语句改为正确的格式如下：</P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><FONT 
+color=#0000ff>COUNT</FONT></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><FONT 
+color=#0000ff>　G1 = year (Lowest thru 76) cylinder (Lowest thru 4) weight (3000 
+thru Highest) .</FONT></P>
+<P style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 0px"><FONT 
+color=#0000ff>EXECUTE .</FONT></P>
+<P>再次运行该语句，可以看到各个记录G1分别被取值为0～3，代表该车满足了0～3条要求，最终满足全部三条要求的应为3条记录。</P>
+<H3><FONT color=#008080>3.0.5 再罗嗦几句<A name=3.0.5></A></FONT></H3>
+<P>由于SPSS的大多数用户已经习惯了在图形对话框界面下操作，许多人不了解程序编辑窗口的用途，编写本章的目的主要是提醒大家：适当的时候，程序编辑窗口可以大大简化我们的工作。实际上，SPSS针对高级用户（需要编程做模拟抽样之类的事情）专门开发了SPSS 
+Production facility模块，确有编程需要（或狂热）的朋友可参考有关书籍。</P>
+<TABLE width=600 border=0>
+  <TBODY>
+  <TR>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/spss2b.htm">回第二章（下）</A></P></TD>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/index.htm">回教程首页</A></P></TD>
+    <TD align=middle width="33%">
+      <P style="TEXT-INDENT: 0px"><A 
+      href="http://dc.cpgl.net/study/otherstudy/spss10/spss4.htm">到第四章</A></P></TD></TR></TBODY></TABLE>
+<P>　</P></BODY></HTML>

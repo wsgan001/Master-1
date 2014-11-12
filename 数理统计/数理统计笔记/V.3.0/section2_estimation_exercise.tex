@@ -1,0 +1,24 @@
+\subsection{习题分析}
+\begin{enumerate}
+  \item Page84,4:已知统总体X,求二项分布B(N,P),$0<p<1$,N为正整数，求N和p的\emph{矩估计}。\\
+    $\begin{array}{c}
+      E(X)=Np,Var(X)=Np(1-p) \\
+      \Rightarrow \left\{
+                    \begin{array}{l}
+                      \hat{NP}=\bar{x} \\
+                      \hat{Np(1-p)}=\frac{1}{n}\sum_{i=1}^n(x_i-\bar{x})^2
+                    \end{array}
+                  \right. \\
+                  
+      
+      \Rightarrow \begin{array}{l}
+                    \hat{p}=1-\frac{\sum_{i=1}^n(x_i-\bar{x})^2}{\bar{x}*n} \\
+                    \hat{N}=\frac{\bar{x}}{1-\frac{\sum_{i=1}^n(x_i-\bar{x})^2}{\bar{x}*n}}
+                  \end{array}
+      
+    \end{array}
+    $
+  \item  Page84,5，7(1):类似于第4题，由概率积分得到E(X)即可。
+  \item Page86,17 [无偏估计问题]
+
+\end{enumerate}
